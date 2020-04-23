@@ -1,0 +1,1557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="26">
+  <Files>
+  </Files>
+  <CheatEntries/>
+  <UserdefinedSymbols/>
+
+
+
+function attachBackground(wc,tblFile)
+  local p = createPicture()
+  p.loadFromStream(findTableFile(tblFile).Stream)
+  wc.OnPaint = function(sender)
+    local c = sender.getCanvas()
+    local bitmap = p.getBitmap()
+    c.draw(0,0,bitmap)
+  end
+end
+title=		"By avangers                                                                                                                            ."
+credits=    ""
+white=      "0x00FFFFFF"
+black=      "0x00000000"
+red=        "0x00000FFF"
+green=      "0x0000FF00"
+Dark=       "0x0052D6E9"
+list=       "0x00CA59C7"
+
+
+
+
+
+function setHack_Information()
+
+  t =
+
+{
+{'gold for glitches',
+[[LuaCall(Aobswap("5e be 05 5d 03 d1 66 cf f8 01 46 03 01 61 be 05 d1 66 f5 34 12 44 00 00 d1 66 f5 34 66 88 37 12 17 00 00 60 9b 01 66 fa 01 60 66 66 b7 02 d1 66 f5 34 66 88 37 27 4f f6 17 03 d1 66 f5 34 66 dd 38 12 17 00 00 60 9b 01 66 fa 01 60 66 66 bf 02 d1 66 f5 34 66 dd 38 27 4f f6 17 03 60 2d 46","5e be 05 5d 03 2e 92 01 02 02 46 03 01 61 be 05 d1 66 f5 34 12 44 00 00 d1 66 f5 34 66 88 37 12 17 00 00 60 9b 01 66 fa 01 60 66 66 b7 02 d1 66 f5 34 66 88 37 27 4f f6 17 03 d1 66 f5 34 66 dd 38 12 17 00 00 60 9b 01 66 fa 01 60 66 66 bf 02 d1 66 f5 34 66 dd 38 27 4f f6 17 03 60 2d 46","14 14 00 00 d0 d1","15"))]],
+[[by avangers]]},
+}
+
+end
+
+
+YADGUI     	= {}
+YADGUI[1]  	= createForm(false)
+YADGUI[5]  	= createGroupBox(YADGUI[1])
+YADGUI[6]  	= createLabel(YADGUI[5])
+YADGUI[9]  	= createLabel(YADGUI[5])
+YADGUI[10] 	= createComboBox(YADGUI[5])
+YADGUI[11] 	= createGroupBox(YADGUI[1])
+YADGUI[12] 	= createButton(YADGUI[5])
+YADGUI[14] 	= createLabel(YADGUI[11])
+YADGUI[15]		= createListBox(YADGUI[11])
+YADGUI[16] 	= createButton(YADGUI[11])
+YADGUI[17] 	= createButton(YADGUI[11])
+YADGUI[18]		= createLabel(YADGUI[11])
+YADGUI[19] 	= createLabel(YADGUI[11])
+YADGUI[23] 	= createButton(YADGUI[11])
+YADGUI[24] 	= createListBox(YADGUI[11])
+YADGUI[25] 	= createCheckBox(YADGUI[24])
+YADGUI[26] 	= createCheckBox(YADGUI[24])
+YADGUI[27] 	= createCheckBox(YADGUI[24])
+YADGUI[28] 	= createCheckBox(YADGUI[24])
+YADGUI[29] 	= createCheckBox(YADGUI[24])
+YADGUI[30] 	= createCheckBox(YADGUI[24])
+YADGUI[31] 	= createCheckBox(YADGUI[24])
+YADGUI[81] 	= createCheckBox(YADGUI[24])
+YADGUI[82] 	= createCheckBox(YADGUI[24])
+YADGUI[83] 	= createCheckBox(YADGUI[24])
+YADGUI[84] 	= createCheckBox(YADGUI[24])
+YADGUI[85] 	= createCheckBox(YADGUI[24])
+
+YADGUI[500]  	= createLabel(YADGUI[1])
+
+YADGUI[70] 	= createPanel(YADGUI[11])
+YADGUI[71] 	= createButton(YADGUI[11])
+YADGUI[72] 	= createButton(YADGUI[11])
+YADGUI[73] 	= createButton(YADGUI[11])
+YADGUI[74] 	= createPanel(YADGUI[11])
+YADGUI[40]		= createLabel(YADGUI[24])
+YADGUI[41]		= createLabel(YADGUI[24])
+YADGUI[42]		= createLabel(YADGUI[24])
+YADGUI[43]		= createLabel(YADGUI[24])
+YADGUI[44]		= createLabel(YADGUI[24])
+YADGUI[45]		= createLabel(YADGUI[24])
+YADGUI[45]		= createLabel(YADGUI[24])
+YADGUI[46]		= createLabel(YADGUI[24])
+YADGUI[47]		= createLabel(YADGUI[24])
+YADGUI[48]		= createLabel(YADGUI[24])
+YADGUI[49]		= createLabel(YADGUI[24])
+YADGUI[50]		= createLabel(YADGUI[24])
+YADGUI[51]		= createLabel(YADGUI[24])
+
+
+
+YADGUI[100] 	= createButton(YADGUI[11])
+YADGUI[101] 	= createButton(YADGUI[11])
+YADGUI[102] 	= createListBox(YADGUI[11])
+
+YADGUI[103] 	= createCheckBox(YADGUI[102])
+YADGUI[104] 	= createCheckBox(YADGUI[102])
+YADGUI[105] 	= createCheckBox(YADGUI[102])
+
+
+YADGUI[115]		= createLabel(YADGUI[102])
+YADGUI[116]		= createLabel(YADGUI[102])
+YADGUI[117]		= createLabel(YADGUI[102])
+YADGUI[119]		= createLabel(YADGUI[102])
+
+
+
+
+
+
+setProperty(YADGUI[70], "Color", green)
+setProperty(YADGUI[74], "Color", green)
+
+
+setProperty(YADGUI[1] , "color", black)
+attachBackground(YADGUI[1],[[yad]])
+setProperty(YADGUI[1] , "ShowInTaskBar", 'stAlways')
+setProperty(YADGUI[1] , "Position", "poScreenCenter")
+setProperty(YADGUI[1] , "BiDiMode", "bdLeftToRight")
+
+FontHeight = getProperty(YADGUI[5] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", white)
+
+FontHeight = getProperty(YADGUI[6] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[9] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "16")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[10] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(YADGUI[10] , "ReadOnly", "True")
+
+FontHeight = getProperty(YADGUI[12] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "13")
+
+FontHeight = getProperty(YADGUI[14] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[15] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+setProperty(YADGUI[15], "Color", white)
+setProperty(YADGUI[31], "Color", green)
+
+FontHeight = getProperty(YADGUI[18] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[19] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[24] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(YADGUI[24], "Color", black)
+
+FontHeight = getProperty(YADGUI[40] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[41] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[42] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[43] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[44] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[45] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(YADGUI[46] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[47] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[48] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[49] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[50] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[51] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+
+FontHeight = getProperty(YADGUI[102] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(YADGUI[102], "Color", black)
+
+FontHeight = getProperty(YADGUI[115] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[116] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[119] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[117] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(YADGUI[500] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", black)
+
+
+
+
+
+
+control_setSize(YADGUI[1], 410, 645)
+x,y = control_getSize(YADGUI[1])
+
+control_setSize(YADGUI[5], 400, 129)
+control_setPosition(YADGUI[5], 5, 110)
+
+control_setPosition(YADGUI[6], 10, 5)
+
+control_setPosition(YADGUI[9], 10, 75)
+
+control_setSize(YADGUI[10], 255, 21)
+control_setPosition(YADGUI[10], 10, 35)
+
+control_setSize(YADGUI[11], 400, 400)
+control_setPosition(YADGUI[11], 5, 240)
+
+control_setSize(YADGUI[12], 107, 28)
+control_setPosition(YADGUI[12], 280, 35)
+
+control_setPosition(YADGUI[14], 13, 15)
+
+control_setSize(YADGUI[15], 255, 260)
+control_setPosition(YADGUI[15], 10, 35)
+
+control_setSize(YADGUI[16], 107, 28)
+control_setPosition(YADGUI[16], 280, 45)
+
+control_setSize(YADGUI[17], 107, 28)
+control_setPosition(YADGUI[17], 280, 88)
+
+control_setPosition(YADGUI[18], 10, 300)
+
+control_setPosition(YADGUI[19], 11, 325)
+
+control_setSize(YADGUI[23], 107, 28)
+control_setPosition(YADGUI[23], 280, 131)
+
+control_setSize(YADGUI[24], 255, 260)
+control_setPosition(YADGUI[24], 10, 35)
+
+control_setPosition(YADGUI[25], 3, 3)
+control_setPosition(YADGUI[26], 3, 23)
+control_setPosition(YADGUI[27], 3, 43)
+control_setPosition(YADGUI[28], 3, 63)
+control_setPosition(YADGUI[29], 3, 83)
+control_setPosition(YADGUI[30], 3, 103)
+control_setPosition(YADGUI[31], 3, 123)
+control_setPosition(YADGUI[81], 3, 143)
+control_setPosition(YADGUI[82], 3, 163)
+control_setPosition(YADGUI[83], 3, 183)
+control_setPosition(YADGUI[84], 3, 203)
+control_setPosition(YADGUI[85], 3, 223)
+
+control_setPosition(YADGUI[40], 10, 3)
+control_setPosition(YADGUI[41], 10, 23)
+control_setPosition(YADGUI[42], 10, 43)
+control_setPosition(YADGUI[43], 10, 63)
+control_setPosition(YADGUI[44], 10, 83)
+control_setPosition(YADGUI[45], 10, 103)
+control_setPosition(YADGUI[46], 10, 123)
+control_setPosition(YADGUI[47], 10, 143)
+control_setPosition(YADGUI[48], 10, 163)
+control_setPosition(YADGUI[49], 10, 183)
+control_setPosition(YADGUI[50], 10, 203)
+control_setPosition(YADGUI[51], 10, 223)
+
+control_setSize(YADGUI[70], 107, 28)
+control_setPosition(YADGUI[70], 280, 217)
+setProperty(YADGUI[70], "Color", white)
+control_setSize(YADGUI[71], 107, 28)
+control_setPosition(YADGUI[71], 280, 260)
+
+control_setSize(YADGUI[72], 107, 28)
+control_setPosition(YADGUI[72], 280, 174)
+
+control_setSize(YADGUI[73], 107, 28)
+control_setPosition(YADGUI[73], 280, 174)
+
+control_setSize(YADGUI[74], 107, 28)
+control_setPosition(YADGUI[74], 280, 217)
+
+control_setSize(YADGUI[100], 107, 28)
+control_setPosition(YADGUI[100], 280, 131)
+
+control_setSize(YADGUI[101], 107, 28)
+control_setPosition(YADGUI[101], 280, 131)
+
+control_setSize(YADGUI[102], 255, 260)
+control_setPosition(YADGUI[102], 10, 35)
+
+control_setPosition(YADGUI[103], 3, 3)
+control_setPosition(YADGUI[104], 3, 23)
+control_setPosition(YADGUI[105], 3, 43)
+
+
+control_setPosition(YADGUI[115], 10, 3)
+control_setPosition(YADGUI[116], 10, 23)
+control_setPosition(YADGUI[117], 10, 43)
+control_setPosition(YADGUI[119], 10, 43)
+
+control_setPosition(YADGUI[500], 280, 600)
+control_setCaption(YADGUI[1], 	title.." ")
+control_setCaption(YADGUI[6], 	"Select your browser. Make sure the game is loaded.")
+control_setCaption(YADGUI[9], 	"Attached to PID: waiting...")
+control_setCaption(YADGUI[12], "Select")
+control_setCaption(YADGUI[14], "Enjoy These Hacks.")
+control_setCaption(YADGUI[16], 'Inject Selected')
+control_setEnabled(YADGUI[16], false)
+control_setCaption(YADGUI[17], 'Inject All')
+control_setEnabled(YADGUI[17], false)
+control_setCaption(YADGUI[18],	"Description:")
+control_setCaption(YADGUI[19],	"No Hack(s) Selected")
+control_setCaption(YADGUI[23], "Reset All Hacks")
+control_setCaption(YADGUI[40], "   INFANTRY UNITS ADD")
+control_setCaption(YADGUI[41], "   GROUND UNITS ADD")
+control_setCaption(YADGUI[42], "   AIR UNITS ADD")
+control_setCaption(YADGUI[43], "   MERC UNITS ADD")
+control_setCaption(YADGUI[44], "   GOGO-BAR HACK")
+control_setCaption(YADGUI[45], "   BASE REPAIR")
+control_setCaption(YADGUI[46], "   TIME INCREASE")
+control_setCaption(YADGUI[47], "   DRONE SILO UNLOCK")
+control_setCaption(YADGUI[48], "   ROCKET SILO UNLOCK")
+control_setCaption(YADGUI[49], "   MERCENERY CAMP UNLOCK")
+control_setCaption(YADGUI[50], "   TROPHY UNLOCK")
+control_setCaption(YADGUI[51], "   UPGRADE MORE WITH GOGO")
+control_setCaption(YADGUI[115], "  EXTRA TURRET UNLOCK")
+control_setCaption(YADGUI[119], "  1")
+
+control_setCaption(YADGUI[500],  credits.." ")
+
+
+control_setCaption(YADGUI[70], 'In-Game Hacks')
+control_setCaption(YADGUI[71], 'PayPal')
+control_setCaption(YADGUI[72], 'Admin')
+control_setCaption(YADGUI[73], 'Admin')
+control_setCaption(YADGUI[74], 'Pre-Game Hacks')
+control_setCaption(YADGUI[100], 'PAGE 2')
+control_setCaption(YADGUI[101], 'PAGE 1')
+
+
+
+
+
+YADGUI[20] = createProgressBar(YADGUI[11])
+control_setPosition(YADGUI[20], 11, 300)
+control_setSize(YADGUI[20], 255, 14)
+control_setVisible(YADGUI[20], false)
+YADGUI[21]  = createLabel(YADGUI[11])
+FontHeight = getProperty(YADGUI[21] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", white)
+control_setPosition(YADGUI[21], 10, 355)
+control_setVisible(YADGUI[21], false)
+YADGUI[22]  = createLabel(YADGUI[11])
+FontHeight = getProperty(YADGUI[22] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+control_setPosition(YADGUI[22], 10, 315)
+control_setVisible(YADGUI[22], false)
+
+setHack_Information()
+al = combobox_getItems(YADGUI[10])
+strings_clear(al)
+strings_add(al, 'Browser list...')
+strings_add(al, 'Google Chrome')
+strings_add(al, 'Maxthon')
+strings_add(al, 'SeaMonkey')
+strings_add(al, 'Firefox')
+strings_add(al, 'Internex Explorer')
+strings_add(al, 'Opera')
+strings_add(al, 'Baidu')
+strings_add(al, 'Chedot')
+strings_add(al, 'Yandex')
+strings_add(al, 'Safari')
+strings_add(al, 'Microsoft Edge')
+strings_add(al, 'Torch')
+strings_add(al, 'Gameroom')
+strings_add(al, 'UCBrowser')
+strings_add(al, 'Dolphin Browser')
+strings_add(al, 'Puffin Browser')
+
+setProperty(YADGUI[10] , "ItemIndex", "0")
+all_enabled = 0
+success = 1
+TeL = listbox_getItems(YADGUI[15])
+TempSave = {}
+strings_clear(TeL)
+check = 0
+i = 0
+repeat
+if t[i+1]==nil then
+	check = 1
+else
+	i = i+1
+	strings_add(TeL, t[i][1])
+	TempSave[i] = {}
+	TempSave[i][1] = t[i][1]
+	TempSave[i][2] = t[i][2]
+	TempSave[i][3] = t[i][3]
+	TempSave[i][4] = 2
+	TempSave[i][5] = 0
+	check = 0
+end
+until check == 1
+
+errorOnLookupFailure(false)
+alreadycheckedPIDS={}
+openNextProcTimer = createTimer(nil,false)
+timer_setInterval(openNextProcTimer, 1000)
+timer_onTimer(openNextProcTimer,
+function(sender)
+	local tempPIDtable = getPids()
+	if #tempPIDtable == 0 then return end
+	timer_setEnabled(sender,false)
+	openProcess(tempPIDtable[1])
+end)
+
+function checkProcessMajor()
+	reinitializeSymbolhandler()
+	if getAddress("pepflashplayer.dll")~=0
+	or getAddress("pepflashplayer32_24_0_0_186.dll")~=0
+	or getAddress("AdobeCPGetAPI") ~=0
+	or getAddress("AdobeCPGetAPI")~=0
+	or getAddress("pepflashplayer32_23_0_0_173.dll")~=0
+	or getAddress("pepflashplayer32_xx_x_x_xxx.dll")~=0
+	or getAddress("pepflashplayerX.dll")~=0
+	or getAddress("pepflashplayer32_21_0_0_182.dll")~=0
+	or getAddress("pepflashplayer32_22_0_0_192.dll")~=0
+	or getAddress("FlashPlayerPlugin_xx_x_x_xxx.exe")~=0
+	or getAddress("plugin-container.exe")~=0
+	or getAddress("FlashPlayerPlugin_21_0_0_213.exe")~=0
+	or getAddress("NPSWF32_xx_x_x_xxx.dll")~=0
+	or getAddress("NPSWF64_xx_x_x_xxx.dll")~=0
+	or getAddress("NPSWFxx_xx_x_x_xxx.dll")~=0
+	or getAddress("NPSWF32_21_0_0_213.dll")~=0
+    or getAddress("Facebook Gameroom.exe")~=0
+    or getAddress("Facebook Gameroom Browser.exe")~=0
+	then
+		return true
+	end
+	return false
+end
+
+function getPids()
+	local SL=createStringlist()
+	getProcesslist(SL)
+	local tempPIDtable={}
+	for i=0,strings_getCount(SL)-1 do
+		local entry = strings_getString(SL,i)
+		local processname = entry:sub(10,255)
+		local PID = tonumber('0x'..entry:sub(1,8))
+		if processname == "chrome.exe" then
+			if alreadycheckedPIDS[PID]~=true then
+				table.insert(tempPIDtable,PID)
+			end
+		end
+	end
+	object_destroy(SL)
+	return tempPIDtable
+end
+
+function checkProcess(sender)
+	timer_setEnabled(sender,false)
+	alreadycheckedPIDS[getOpenedProcessID()]=true
+	if checkProcessMajor() then
+		timer_setEnabled(openNextProcTimer,false)
+		alreadycheckedPIDS={}
+		enableHacks()
+	else
+		timer_setEnabled(openNextProcTimer,true)
+	end
+end
+
+checkProcessTimer = createTimer(nil,false)
+timer_setInterval(checkProcessTimer, 100)
+timer_onTimer(checkProcessTimer, checkProcess)
+
+function onOpenProcess()
+   if success == 1 then return end
+   timer_setEnabled(checkProcessTimer,true)
+end
+
+
+
+
+function scanBrowser()
+	AttachItems = combobox_getItems(YADGUI[10])
+	AttachIndex = combobox_getItemIndex(YADGUI[10])
+    control_setEnabled(YADGUI[16], false)
+	control_setEnabled(YADGUI[17], false)
+    control_setEnabled(YADGUI[23], false)
+	local font = getProperty(YADGUI[9] , "Font")
+	setProperty(font, "Color", black)
+	control_setCaption(YADGUI[9], "Attached to PID: " .. "Scanning Process...")
+	processMessages()
+	if AttachIndex == -1 then return end
+	if AttachIndex == 0 then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. "No Browser Selected.")
+		return
+	end
+
+    local check = strings_getString(AttachItems,AttachIndex)
+
+
+
+    if check == 'Google Chrome' or check == 'Internet Explorer' or check == 'SeaMonkey' then openProcess("chrome.exe") end
+		errorOnLookupFailure(false)
+		reinitializeSymbolhandler()
+		err=getAddress("chrome.exe")==0
+			if err==true then
+		setProperty(font , "Color", red)
+		control_setCaption(YADGUI[9], "Attached to PID: " .. "chrome.exe not found")
+	else
+		local PID=getOpenedProcessID()
+		setProperty(font, "Color", black)
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Flash Player Plugin")
+        control_setEnabled(YADGUI[16], true)
+		control_setEnabled(YADGUI[17], true)
+        control_setEnabled(YADGUI[23], true)
+	end
+
+	    if check == 'Facebook Gameroom test 1' or check == 'Internet Explorer' or check == 'SeaMonkey' then openProcess("Facebook Gameroom Browser.exe") end
+		errorOnLookupFailure(false)
+		reinitializeSymbolhandler()
+		err=getAddress("Facebook Gameroom Browser.exe")==0
+			if err==true then
+		setProperty(font , "Color", red)
+		control_setCaption(YADGUI[9], "Attached to PID: " .. "Facebook Gameroom Browser.exe not found")
+	else
+		local PID=getOpenedProcessID()
+		setProperty(font, "Color", black)
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Flash Player Plugin")
+        control_setEnabled(YADGUI[16], true)
+		control_setEnabled(YADGUI[17], true)
+        control_setEnabled(YADGUI[23], true)
+	end
+
+
+
+    if check == 'Firefox' or check == 'Internet Explorer' or check == 'SeaMonkey' then openProcess("FlashPlayerPlugin") end
+		errorOnLookupFailure(false)
+		reinitializeSymbolhandler()
+		err=getAddress("kernel32.dll")==0
+			if err==true then
+		setProperty(font , "Color", red)
+		control_setCaption(YADGUI[9], "Attached to PID: " .. "Flash Player Plugin not found")
+	else
+		local PID=getOpenedProcessID()
+		setProperty(font, "Color", green)
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Flash Player Plugin")
+        control_setEnabled(YADGUI[16], true)
+		control_setEnabled(YADGUI[17], true)
+        control_setEnabled(YADGUI[23], true)
+	end
+
+
+
+	local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Dolphin Browser' or check == 'Internet Explorer' then openProcess("FlashPlayerPlugin") end
+		errorOnLookupFailure(false)
+		reinitializeSymbolhandler()
+		err=getAddress("kernel32.dll")==0
+	if err==true then
+		setProperty(font , "Color", red)
+		control_setCaption(YADGUI[9], "Attached to PID: " .. "Flash player plugin not found")
+	else
+		local PID=getOpenedProcessID()
+		setProperty(font, "Color", green)
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - flash player plugin")
+		control_setEnabled(YADGUI[16], true)
+		control_setEnabled(YADGUI[17], true)
+        control_setEnabled(YADGUI[23], true)
+	end
+		local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Puffin Browser' or check == 'Internet Explorer' then openProcess("FlashPlayerPlugin") end
+		errorOnLookupFailure(false)
+		reinitializeSymbolhandler()
+		err=getAddress("kernel32.dll")==0
+	if err==true then
+		setProperty(font , "Color", red)
+		control_setCaption(YADGUI[9], "Attached to PID: " .. "Flash player plugin not found")
+	else
+		local PID=getOpenedProcessID()
+		setProperty(font, "Color", green)
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - flash player plugin")
+		control_setEnabled(YADGUI[16], true)
+		control_setEnabled(YADGUI[17], true)
+        control_setEnabled(YADGUI[23], true)
+	end
+		local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Maxthon' then
+		success = 0
+		local test = openProcess("Maxthon.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(YADGUI[9], "Attached to PID: " .. "Maxthon not found.")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"Maxthon.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+		local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Opera' then
+		success = 0
+		local test = openProcess("Opera.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(YADGUI[9], "Attached to PID: " .. "Opera not found.")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"Opera.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+
+		local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Baidu' then
+		success = 0
+		local test = openProcess("spark.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(YADGUI[9], "Attached to PID: " .. "spark not found.")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"spark.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Chedot' then
+		success = 0
+		local test = openProcess("Chedot.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(YADGUI[9], "Attached to PID: " .. "Chedot not found.")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"Chedot.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+
+local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Yandex' then
+		success = 0
+		local test = openProcess("browser.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(YADGUI[9], "Attached to PID: " .. "Yandex not found.")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"browser.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+
+
+local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Safari' then
+		success = 0
+		local test = openProcess("Safari.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(YADGUI[9], "Attached to PID: " .. "Safari not found.")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"Safari.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+
+local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Microsoft Edge' then
+		success = 0
+		local test = openProcess("MicrosoftEdgeCP.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(YADGUI[9], "Attached to PID: " .. " Microsoft Edge not found.")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"MicrosoftEdgeCP.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+
+
+local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Torch' then
+		success = 0
+		local test = openProcess("Torch.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(YADGUI[9], "Attached to PID: " .. "Torch not found.")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"Torch.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+
+local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'UCBrowser' then
+		success = 0
+		local test = openProcess("UCBrowser.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(MainGUI_1.MainGUI_9, "Attached to PID: " .. "UCBrowser not found.")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"UCBrowser.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+
+local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Gameroom' then
+		success = 0
+		local test = openProcess("Facebook Gameroom Browser.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(MainGUI_1.MainGUI_9, "Attached to PID: " .. "Gameroom")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"Facebook Gameroom Browser.exee")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+
+end
+
+function facebookarcadescan (sender)
+errorOnLookupFailure(false);
+facebookarcade = openProcess("Facebook Gameroom Browser.exe")
+facebookarcadeAttach =   {
+                  AllProcesses = {};
+                  RightProccess = function () return (getAddress("Facebook Gameroom Browser.exe")~=0 or getAddress("Facebook Gameroom Browser.exe")~=0) end;
+                  FindProcess = function () if (facebookarcadeAttach.Started) then return end; if (#facebookarcadeAttach.AllProcesses == 0) then facebookarcadeAttach.GetfacebookarcadeProcesses(); end; createNativeThread(function ()   facebookarcadeAttach.Started = true; for k,v in pairs(facebookarcadeAttach.AllProcesses) do openProcess(k); reinitializeSymbolhandler(); if (facebookarcadeAttach.RightProccess()) then facebookarcadeAttach.Function(); facebookarcadeAttach.Started = false; break; end; end; facebookarcadeAttach.AllProcesses = {}; facebookarcadeAttach.Started = false; end); end;
+                  GetfacebookarcadeProcesses = function () local SL=createStringlist(); getProcesslist(SL); for i=0,strings_getCount(SL)-1 do local entry = strings_getString(SL,i); local processname = entry:sub(10,255); local PID = tonumber('0x'..entry:sub(1,8)); if processname:lower() == 'Facebook Gameroom Browser.exe' then facebookarcadeAttach.AllProcesses[PID] = true; end; end; end;
+                  Started = false;
+                  Start = function (Function) facebookarcadeAttach.Function = Function; facebookarcadeAttach.FindProcess();end;
+                  Function = nil;
+
+               };
+
+facebookarcadeAttach.Start(function () messageDialog('Attached to Gameroom', mtInformation, mbOK); end)
+      errorOnLookupFailure(false)
+      reinitializeSymbolhandler()
+      err=getAddress("Facebook Gameroom Browser.exe")==0
+   if err==true then
+control_setCaption(UDF1_CEButton4, "Pid Not Founded")
+   else
+      local PID=getOpenedProcessID()
+		control_setCaption(UDF1_CEButton4, "PID: " .. PID .. " - Gameroom")
+   end
+end
+
+function facebookarcadeunityscan (sender)
+errorOnLookupFailure(false);
+facebookarcadeunity = openProcess("fbunity")
+facebookarcadeunityAttach =   {
+                  AllProcesses = {};
+                  RightProccess = function () return (getAddress("fbunity")~=0 or getAddress("fbunity")~=0) end;
+                  FindProcess = function () if (facebookarcadeunityAttach.Started) then return end; if (#facebookarcadeunityAttach.AllProcesses == 0) then facebookarcadeunityAttach.GetfacebookarcadeunityProcesses(); end; createNativeThread(function ()   facebookarcadeunityAttach.Started = true; for k,v in pairs(facebookarcadeunityAttach.AllProcesses) do openProcess(k); reinitializeSymbolhandler(); if (facebookarcadeunityAttach.RightProccess()) then facebookarcadeunityAttach.Function(); facebookarcadeunityAttach.Started = false; break; end; end; facebookarcadeunityAttach.AllProcesses = {}; facebookarcadeunityAttach.Started = false; end); end;
+                  GetfacebookarcadeunityProcesses = function () local SL=createStringlist(); getProcesslist(SL); for i=0,strings_getCount(SL)-1 do local entry = strings_getString(SL,i); local processname = entry:sub(10,255); local PID = tonumber('0x'..entry:sub(1,8)); if processname:lower() == 'fbunity' then facebookarcadeunityAttach.AllProcesses[PID] = true; end; end; end;
+                  Started = false;
+                  Start = function (Function) facebookarcadeunityAttach.Function = Function; facebookarcadeunityAttach.FindProcess();end;
+                  Function = nil;
+
+               };
+
+end
+
+function enableHacks()
+	setProperty(getProperty(YADGUI[9] , "Font"), "Color", black)
+	local PID=getOpenedProcessID()
+	local check = strings_getString(AttachItems,AttachIndex)
+    if check == 'Firefox' or check == 'Internet Explorer' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Firefox")
+	elseif check == 'Google Chrome' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Google Chrome")
+	elseif check == 'Maxthon' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Maxthon")
+	elseif check == 'Microsoft Edge' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - MicrosoftEdgeCP.exe")
+	elseif check == 'Baidu Browser' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Spark.exe")
+	elseif check == 'Torch' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Torch.exe")
+	elseif check == 'Safari' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Safari.exe")
+	elseif check == 'Yandex' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Browser.exe")
+	elseif check == 'Chedot' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Chedot.exe")
+	elseif check == 'Facebook Gameroom test 3' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " - Facebook Gameroom Browser.exe")
+
+		elseif check == 'Gameroom' then
+		control_setCaption(YADGUI[9], "Attached to PID: " .. PID .. " Gameroom")end
+	success = 1
+    control_setEnabled(YADGUI[16], true)
+    control_setEnabled(YADGUI[17], true)
+    control_setEnabled(YADGUI[23], true)
+end
+
+function show_progressbar()
+     control_setPosition(YADGUI[22], 10, 320)
+     control_setCaption(YADGUI[22], '')
+     control_setVisible(YADGUI[18], false)
+     control_setVisible(YADGUI[19], false)
+     control_setVisible(YADGUI[20], true)
+     control_setVisible(YADGUI[21], true)
+     control_setVisible(YADGUI[22], true)
+     progressbar_setPosition(YADGUI[20], 0)
+end
+
+function hide_progressbar()
+	 control_setVisible(YADGUI[20], false)
+	 control_setVisible(YADGUI[21], false)
+	 control_setVisible(YADGUI[22], false)
+	 control_setVisible(YADGUI[18], true)
+	 control_setVisible(YADGUI[19], true)
+end
+
+function ExecuteHacks()
+    Pause()
+    HLS = listbox_getItemIndex(YADGUI[15])
+    LIST = listbox_getItems(YADGUI[15])
+    if HLS == -1 then return end
+    i = HLS+1
+    font=getProperty(YADGUI[21], 'Font')
+    control_setVisible(YADGUI[18], false)
+    control_setVisible(YADGUI[19], false)
+    control_setVisible(YADGUI[20], false)
+    control_setVisible(YADGUI[21], true)
+    control_setVisible(YADGUI[22], false)
+    if t[i][2]==nil then
+         setProperty(font, 'Color', white)
+         control_setCaption(YADGUI[21], "You Already Injected This Hack!")
+         unpause()
+         return
+    end
+    control_setEnabled(YADGUI[16], false)
+    control_setEnabled(YADGUI[17], false)
+
+    control_setCaption(YADGUI[21], "Injecting hack...")
+    control_setVisible(YADGUI[22], true)
+    control_setCaption(YADGUI[22], '')
+    control_setPosition(YADGUI[22], 10, 185)
+    strings_setString(LIST, HLS, t[i][1])
+    processMessages()
+    if TempSave[i][4] == 2 then
+      Asm = autoAssemble(t[i][2])
+      font=getProperty(YADGUI[22], 'Font')
+      control_setCaption(YADGUI[21], "Injecting Hack(S). Finished.")
+      unpause()
+      if AobSwapCheck~=true then
+        TempText = t[i][1]..' - Failed'
+        TempSave[i][5] = t[i][1]..' - Failed'
+        strings_setString(LIST, HLS, TempText)
+        setProperty(font, 'Color', red1)
+        control_setCaption(YADGUI[22], 'Failed to Injecting !\nHack Already Injected or game was updated.')
+        unpause()
+ else
+        TempText = t[i][1]..' - Injected'
+        TempSave[i][5] = t[i][1]..' - Injected'
+        strings_setString(LIST, HLS, TempText)
+        setProperty(font, 'Color', green)
+        control_setCaption(YADGUI[22], 'Hack Injected. Enjoy it !')
+unpause()
+t[i][2] = nil
+        TempSave[i][4] = 1
+      end
+    end
+    if TempSave[i][4] == 0 then TempSave[i][4] = 2 end
+    control_setEnabled(YADGUI[16], true)
+    control_setEnabled(YADGUI[17], true)
+
+end
+
+function ExecuteAllHacks()
+         Pause()
+     font=getProperty(YADGUI[21], 'Font')
+     if all_enabled == 1 then
+        control_setVisible(YADGUI[18], false)
+        control_setVisible(YADGUI[19], false)
+        control_setVisible(YADGUI[20], false)
+        control_setVisible(YADGUI[21], true)
+        control_setVisible(YADGUI[22], false)
+        setProperty(font, 'Color', white)
+        control_setCaption(YADGUI[21], "You Already Injected All Hacks!")
+        unpause()
+        return
+     end
+     lb = listbox_getItems(YADGUI[15])
+     LIST = listbox_getItems(YADGUI[15])
+     control_setEnabled(YADGUI[16], false)
+     control_setEnabled(YADGUI[17], false)
+     control_setEnabled(YADGUI[23], false)
+     show_progressbar()
+     progressbar_setMax(YADGUI[20], strings_getCount(lb))
+     for i = 1, strings_getCount(lb) do
+         strings_setString(LIST, i-1, t[i][1])
+     end
+	 count = 0
+     for i = 1, strings_getCount(lb) do
+          control_setCaption(YADGUI[21], "Injecting hack: "..t[i][1])
+          progressbar_setPosition(YADGUI[20], i)
+          processMessages()
+		  if TempSave[i][4] == 2 then
+		        Asm = autoAssemble(t[i][2])
+				if AobSwapCheck~=true then
+                    TempSave[i][5] = t[i][1]..' - Failed'
+                    strings_setString(LIST, i-1, TempSave[i][5])
+ 				else
+	                TempSave[i][5] = t[i][1]..' - Injected'
+                    strings_setString(LIST, i-1, TempSave[i][5])
+	                t[i][2] = nil
+					TempSave[i][4] = 1
+					count = count + 1
+				 end
+		   else
+  				count = count + 1
+                 TempSave[i][5] = t[i][1]..' - Injected'
+                 strings_setString(LIST, i-1, TempSave[i][5])
+		   end
+		if TempSave[i][4] == 0 then TempSave[i][4] = 2 end
+	end
+    control_setEnabled(YADGUI[16], true)
+    control_setEnabled(YADGUI[17], true)
+    control_setEnabled(YADGUI[23], true)
+    control_setCaption(YADGUI[21], "Injecting hack(s). Finished ! ")
+    font=getProperty(YADGUI[22], 'Font')
+	if count == strings_getCount(lb) then
+		setProperty(font, 'Color', white)
+        control_setCaption(YADGUI[22], 'All Hacks Injected. Enjoy it !')
+        all_enabled = 1
+        unpause()
+    else
+		diff = strings_getCount(lb) - count
+        if diff == 1 then
+           text = "hack"
+        else
+           text = "hacks"
+        end
+        setProperty(font, 'Color', red)
+	    control_setCaption(YADGUI[22], 'Failed to Injecting ' .. diff .. ' ' .. text .. ' !\nHack(s) allready Injected or game was updated.')
+        unpause()
+	end
+        unpause()
+end
+
+function ResetAllHacks()
+     lb = listbox_getItems(YADGUI[15])
+     ct = strings_getCount(lb)
+     for i = 1, ct do
+         strings_setString(lb, i-1, t[i][1])
+         TempSave[i][4] = 2
+         t[i][2]= TempSave[i][2]
+     end
+     all_enabled = 0
+     hide_progressbar()
+     control_setVisible(YADGUI[19], false)
+     control_setCaption(YADGUI[18], 'All Hacks Have Been Resetted.')
+end
+
+function DEC_HEX(IN)
+	local B,K,OUT,I,D=16,"0123456789ABCDEF","",0
+	 if IN&lt;1 then
+		OUT=0
+		return OUT
+	end
+	while IN&gt;0 do
+		I=I+1
+		IN,D=math.floor(IN/B),math.mod(IN,B)+1
+		OUT=string.sub(K,D,D)..OUT
+	end
+	return OUT
+end
+
+function Aobswap(search, change)
+     aobs = AOBScan(search, "+W*X")
+     if(aobs == nil) then
+		AobSwapCheck=false
+	 else
+		 j = stringlist_getCount(aobs)
+		for i = 1, j do
+			 address=stringlist_getString(aobs,i-1)
+			 for i = 1, string.len(change), 3 do
+				 z = string.sub(change, i, i+2)
+				 x, y = string.find(z, "%?+")
+				  if (x == nil) then
+					 script=[[
+					 ]]..address.."+"..(DEC_HEX((i-1)/3))..[[:
+					 db ]]..z..[[
+					 ]]
+					 autoAssemble(script)
+				 end
+			 end
+		 end
+		object_destroy(aobs);
+		aobs=nil
+		AobSwapCheck=true
+	end
+end
+
+function AOBSwap(search, change)
+     aobs = AOBScan(search, "-W*X")
+     if(aobs == nil) then
+		AobSwapCheck=false
+	 else
+		 j = stringlist_getCount(aobs)
+		for i = 1, j do
+			 address=stringlist_getString(aobs,i-1)
+			 for i = 1, string.len(change), 3 do
+				 z = string.sub(change, i, i+2)
+				 x, y = string.find(z, "%?+")
+				  if (x == nil) then
+					 script=[[
+					 ]]..address.."+"..(DEC_HEX((i-1)/3))..[[:
+					 db ]]..z..[[
+					 ]]
+					 autoAssemble(script)
+				 end
+			 end
+		 end
+		object_destroy(aobs);
+		aobs=nil
+		AobSwapCheck=true
+	end
+end
+
+
+function HackDescriptionsChange()
+    hide_progressbar()
+    control_setCaption(YADGUI[18], 'Description:')
+    HLS = listbox_getItemIndex(YADGUI[15])
+    if HLS == -1 then return end
+    i = HLS+1
+    if t[i][3]~='' and t[i][3]~=nil then
+		control_setCaption(YADGUI[19] ,t[i][3])
+    else
+		control_setCaption(YADGUI[19], "No description available.")
+    end
+end
+
+
+
+
+ function CloseTrainer()
+
+   form_hide(YADGUI[1])
+   closeCE()
+  end
+
+
+function INGAME_HACKS_PAGE_2()
+         form_hide(YADGUI[16])
+         form_hide(YADGUI[17])
+         form_hide(YADGUI[23])
+         form_hide(YADGUI[15])
+         form_hide(YADGUI[70])
+         form_hide(YADGUI[24])
+         form_show(YADGUI[73])
+         form_show(YADGUI[74])
+         form_hide(YADGUI[100])
+         form_show(YADGUI[101])
+         form_show(YADGUI[102])
+
+end
+
+function INGAME_HACKS()
+         form_hide(YADGUI[16])
+         form_hide(YADGUI[17])
+         form_hide(YADGUI[23])
+         form_hide(YADGUI[15])
+         form_hide(YADGUI[70])
+         form_show(YADGUI[24])
+         form_show(YADGUI[73])
+         form_show(YADGUI[74])
+         form_show(YADGUI[100])
+         form_hide(YADGUI[101])
+
+end
+
+function MAX_Facebook()
+showMessage("My PayPal Donators Link :")
+ShellExecute("https://www.paypal.me/avangers")
+end
+
+
+
+
+function Admin()
+showMessage("Admin : Kaka Yado")
+ShellExecute("http://www.Facebook.com/kakayado")
+end
+
+function Pregame_Hacks()
+         form_show(YADGUI[16])
+         form_show(YADGUI[17])
+         form_show(YADGUI[23])
+         form_show(YADGUI[15])
+         form_show(YADGUI[70])
+         form_hide(YADGUI[24])
+         form_hide(YADGUI[73])
+         form_hide(YADGUI[74])
+         form_hide(YADGUI[100])
+         form_hide(YADGUI[101])
+         form_hide(YADGUI[102])
+end
+
+
+
+
+
+
+
+
+function INF_ADD()
+
+if (checkbox_getState(YADGUI[25]) == 1) then
+
+Aobswap("")
+checkbox_setState(YADGUI[25], 1)
+	control_setCaption(YADGUI[40], "")
+    setProperty(YADGUI[40], "Color", white)
+    checkbox_setState(YADGUI[25], 0)
+ 				else
+    control_setCaption(YADGUI[40], "")
+    setProperty(YADGUI[40], "Color", white)
+    checkbox_setState(YADGUI[25], 1)
+end
+
+
+  else
+    Aobswap("")
+control_setCaption(YADGUI[40], "")
+    setProperty(YADGUI[40], "Color", black)
+    checkbox_setState(YADGUI[25], 0)
+  end
+
+end
+
+function GROUND_ADD()
+
+if (checkbox_getState(YADGUI[26]) == 1) then
+    Aobswap("")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[41], "")
+    setProperty(YADGUI[41], "Color", white)
+    checkbox_setState(YADGUI[26], 0)
+ 				else
+    control_setCaption(YADGUI[40], "")
+    setProperty(YADGUI[41], "Color", white)
+    checkbox_setState(YADGUI[26], 1)
+end
+  else
+    Aobswap("")
+control_setCaption(YADGUI[40], "")
+    setProperty(YADGUI[41], "Color", black)
+    checkbox_setState(YADGUI[26], 0)
+  end
+
+end
+
+function AIR_ADD()
+
+if (checkbox_getState(YADGUI[27]) == 1) then
+    Aobswap("")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[42], "")
+    setProperty(YADGUI[42], "Color", white)
+    checkbox_setState(YADGUI[27], 0)
+ 				else
+    control_setCaption(YADGUI[42], "")
+    setProperty(YADGUI[42], "Color", white)
+    checkbox_setState(YADGUI[27], 1)
+    end
+  else
+    Aobswap("")
+control_setCaption(YADGUI[42], "")
+    setProperty(YADGUI[42], "Color", black)
+    checkbox_setState(YADGUI[27], 0)
+  end
+
+end
+
+function MERC_ADD()
+
+if (checkbox_getState(YADGUI[28]) == 1) then
+    Aobswap("")
+    if AobSwapCheck~=true then
+	control_setCaption(YADGUI[43], "")
+    setProperty(YADGUI[43], "Color", white)
+    checkbox_setState(YADGUI[28], 0)
+ 				else
+    control_setCaption(YADGUI[43], "")
+    setProperty(YADGUI[43], "Color", white)
+    checkbox_setState(YADGUI[28], 1)
+    end
+  else
+    Aobswap("")
+control_setCaption(YADGUI[43], "")
+    setProperty(YADGUI[43], "Color", green)
+    checkbox_setState(YADGUI[28], 0)
+  end
+
+end
+
+function GOGO_HACK()
+
+if (checkbox_getState(YADGUI[29]) == 1) then
+    Aobswap("")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[44], "")
+    setProperty(YADGUI[44], "Color", white)
+    checkbox_setState(YADGUI[29], 0)
+ 				else
+    control_setCaption(YADGUI[44], "")
+    setProperty(YADGUI[44], "Color", white)
+    checkbox_setState(YADGUI[29], 1)
+    end
+  else
+    Aobswap("")
+control_setCaption(YADGUI[44], "")
+    setProperty(YADGUI[44], "Color", black)
+end
+end
+
+function BASE_REPAIR()
+
+if (checkbox_getState(YADGUI[30]) == 1) then
+Aobswap("?? ?? ?? ?? ?? ?? ?? ?? ?? 02 68 70 ?? ?? ?? ?? ?? ?? ??","?? ?? ?? ?? ?? ?? ?? ?? ?? 02 68 73 ?? ?? ?? ?? ?? ?? ??")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[45], "   BASE REPAIR  -Failed")
+    setProperty(YADGUI[45], "Color", white)
+    checkbox_setState(YADGUI[30], 0)
+ 				else
+    control_setCaption(YADGUI[45], "   BASE REPAIR  -Injected.By MOde")
+    setProperty(YADGUI[45], "Color", white)
+    checkbox_setState(YADGUI[30], 1)
+    end
+  else
+Aobswap("?? ?? ?? ?? ?? ?? ?? ?? ?? 02 68 70 ?? ?? ?? ?? ?? ?? ??","?? ?? ?? ?? ?? ?? ?? ?? ?? 02 68 73 ?? ?? ?? ?? ?? ?? ??")
+control_setCaption(YADGUI[45], "   BASE REPAIR")
+    setProperty(YADGUI[45], "Color", black)
+end
+end
+
+
+
+function TIME_INCREASE()
+
+if (checkbox_getState(YADGUI[31]) == 1) then
+    Aobswap("00 00 00 00 01 00 00 00 E8 03 00 00 ?? ?? 00 00 ?? ?? ?? 00 ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 40 8F 40 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00","00 00 00 00 01 00 00 00 01 00 00 00")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[46], "   TIME INCREASE  -Failed")
+    setProperty(YADGUI[46], "Color", white)
+    checkbox_setState(YADGUI[31], 0)
+ 				else
+    control_setCaption(YADGUI[46], "   TIME INCREASE  -Injected.By MOde")
+    setProperty(YADGUI[46], "Color", white)
+    checkbox_setState(YADGUI[31], 1)
+    end
+  else
+    Aobswap("00 00 00 00 01 00 00 00 01 00 00 00 ?? ?? 00 00 ?? ?? ?? 00 ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 40 8F 40 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00","00 00 00 00 01 00 00 00 E8 03 00 00")
+control_setCaption(YADGUI[46], "   TIME INCREASE")
+    setProperty(YADGUI[46], "Color", black)
+  end
+
+end
+
+function DRONE_SILO_UNLOCK()
+
+if (checkbox_getState(YADGUI[81]) == 1) then
+    Aobswap("?? ?? ?? ?? 0B 00 00 00 03 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? ?? ?? ?? 0B 00 00 00 03 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[47], "   DRONE SILO UNLOCK  -Failed")
+    setProperty(YADGUI[47], "Color", white)
+    checkbox_setState(YADGUI[81], 0)
+ 				else
+    control_setCaption(YADGUI[47], "   DRONE SILO UNLOCK  -Injected.By MOde")
+    setProperty(YADGUI[47], "Color", white)
+    checkbox_setState(YADGUI[81], 1)
+    end
+else
+    Aobswap("?? ?? ?? ?? 0B 00 00 00 03 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? ?? ?? ?? 0B 00 00 00 03 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+control_setCaption(YADGUI[47], "   DRONE SILO UNLOCK")
+    setProperty(YADGUI[47], "Color", black)
+  end
+
+end
+
+function ROCKET_SILO_UNLOCK()
+
+if (checkbox_getState(YADGUI[82]) == 1) then
+    Aobswap("?? ?? ?? ?? 0F 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? ?? ?? ?? 0F 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[48], "   ROCKET SILO UNLOCK  -Failed")
+    setProperty(YADGUI[48], "Color", white)
+    checkbox_setState(YADGUI[82], 0)
+ 				else
+    control_setCaption(YADGUI[48], "   ROCKET SILO UNLOCK  -Injected.By MOde")
+    setProperty(YADGUI[48], "Color", white)
+    checkbox_setState(YADGUI[82], 1)
+    end
+  else
+    Aobswap("?? ?? ?? ?? 0F 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? ?? ?? ?? 0F 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+control_setCaption(YADGUI[48], "   ROCKET SILO UNLOCK")
+    setProperty(YADGUI[48], "Color", black)
+  end
+
+end
+
+function MERCENARY_CAMP_UNLOCK()
+
+if (checkbox_getState(YADGUI[83]) == 1) then
+    Aobswap("?? ?? ?? ?? 0A 00 00 00 02 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? ?? ?? ?? 0A 00 00 00 02 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[49], "   MERCENERY CAMP UNLOCK  -Failed")
+    setProperty(YADGUI[49], "Color", white)
+    checkbox_setState(YADGUI[83], 0)
+ 				else
+    control_setCaption(YADGUI[49], "   MERCENERY CAMP UNLOCK  -Injected.By MOde")
+    setProperty(YADGUI[49], "Color", white)
+    checkbox_setState(YADGUI[83], 1)
+    end
+  else
+    Aobswap("?? ?? ?? ?? 0A 00 00 00 02 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? ?? ?? ?? 0A 00 00 00 02 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+control_setCaption(YADGUI[49], "   MERCENERY CAMP UNLOCK")
+    setProperty(YADGUI[49], "Color", black)
+  end
+
+end
+
+
+function TROPHY_UNLOCK()
+
+if (checkbox_getState(YADGUI[84]) == 1) then
+    Aobswap("?? 00 00 00 04 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??","?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[50], "   TROPHY UNLOCK  -Failed")
+    setProperty(YADGUI[50], "Color", white)
+    checkbox_setState(YADGUI[84], 0)
+ 				else
+    control_setCaption(YADGUI[50], "   TROPHY UNLOCK  -Injected.By MOde")
+    setProperty(YADGUI[50], "Color", white)
+    checkbox_setState(YADGUI[84], 1)
+    end
+  else
+    Aobswap("?? 00 00 00 04 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??","?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00")
+control_setCaption(YADGUI[50], "   TROPHY UNLOCK")
+    setProperty(YADGUI[50], "Color", black)
+  end
+
+end
+
+
+
+function UPGRADE_MORE_WITH_GOGO()
+
+if (checkbox_getState(YADGUI[85]) == 1) then
+    Aobswap("0B 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0A 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("08 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("05 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[51], "   UPGRADE MORE WITH GOGO  -Failed")
+    setProperty(YADGUI[51], "Color", white)
+    checkbox_setState(YADGUI[85], 0)
+ 				else
+    control_setCaption(YADGUI[51], "   UPGRADE MORE WITH GOGO  -Injected.By MOde")
+    setProperty(YADGUI[51], "Color", white)
+    checkbox_setState(YADGUI[85], 1)
+    end
+   else
+    Aobswap("0B 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0A 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("08 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("05 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+control_setCaption(YADGUI[51], "   UPGRADE MORE WITH GOGO")
+    setProperty(YADGUI[51], "Color", black)
+  end
+
+end
+function TEST_LATER()
+
+if (checkbox_getState(YADGUI[999]) == 1) then
+    getAddressList().getMemoryRecordByDescription('Base Repair').Active=true
+  else
+    getAddressList().getMemoryRecordByDescription('Base Repair').Active=flase
+  end
+
+end
+
+
+function EXTRA_TURRET_UNLOCK()
+
+if (checkbox_getState(YADGUI[103]) == 1) then
+Aobswap("26 00 00 00 1E 00 00 00 07 00 00 00 0F 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 1E 00 00 00 ?? 00 00 00 0F 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+Aobswap("07 00 00 00 00 00 00 00 07 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+Aobswap("08 00 00 00 00 00 00 00 08 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+Aobswap("09 00 00 00 00 00 00 00 09 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+Aobswap("1C 00 00 00 14 00 00 00 0A 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+Aobswap("20 00 00 00 00 00 00 00 0F 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+if AobSwapCheck~=true then
+	control_setCaption(YADGUI[115], "   EXTRA TURRET UNLOCK  -Failed")
+    setProperty(YADGUI[115], "Color", white)
+    checkbox_setState(YADGUI[103], 0)
+ 				else
+    control_setCaption(YADGUI[115], "   EXTRA TURRET UNLOCK  -Injected.By MOde")
+    setProperty(YADGUI[115], "Color", white)
+    checkbox_setState(YADGUI[103], 1)
+    end
+  else
+Aobswap("26 00 00 00 1E 00 00 00 07 00 00 00 0F 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 1E 00 00 00 ?? 00 00 00 0F 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+Aobswap("07 00 00 00 00 00 00 00 07 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+Aobswap("08 00 00 00 00 00 00 00 08 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+Aobswap("09 00 00 00 00 00 00 00 09 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+Aobswap("1C 00 00 00 14 00 00 00 0A 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+Aobswap("20 00 00 00 00 00 00 00 0F 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+control_setCaption(YADGUI[115], "   EXTRA TURRET UNLOCK")
+    setProperty(YADGUI[115], "Color", black)
+  end
+
+end
+control_onClick(YADGUI[12], scanBrowser)
+control_onClick(YADGUI[16], ExecuteHacks)
+control_onClick(YADGUI[17], ExecuteAllHacks)
+control_onClick(YADGUI[23], ResetAllHacks)
+control_onClick(YADGUI[25], INF_ADD)
+control_onClick(YADGUI[26], GROUND_ADD)
+control_onClick(YADGUI[27], AIR_ADD)
+control_onClick(YADGUI[28], MERC_ADD)
+control_onClick(YADGUI[29], GOGO_HACK)
+control_onClick(YADGUI[30], BASE_REPAIR)
+control_onClick(YADGUI[31], TIME_INCREASE)
+control_onClick(YADGUI[81], DRONE_SILO_UNLOCK)
+control_onClick(YADGUI[82], ROCKET_SILO_UNLOCK)
+control_onClick(YADGUI[83], MERCENARY_CAMP_UNLOCK)
+control_onClick(YADGUI[84], TROPHY_UNLOCK)
+control_onClick(YADGUI[85], UPGRADE_MORE_WITH_GOGO)
+control_onClick(YADGUI[103],EXTRA_TURRET_UNLOCK)
+
+control_onClick(YADGUI[70], INGAME_HACKS)
+control_onClick(YADGUI[71], MAX_Facebook)
+control_onClick(YADGUI[72], Admin)
+control_onClick(YADGUI[73], Admin)
+control_onClick(YADGUI[74], Pregame_Hacks)
+control_onClick(YADGUI[100], INGAME_HACKS_PAGE_2)
+control_onClick(YADGUI[101], INGAME_HACKS)
+control_onClick(YADGUI[500], MAX_Facebook)
+
+
+
+
+setMethodProperty(YADGUI[15], 'OnSelectionChange', HackDescriptionsChange)
+form_onClose(YADGUI[1], CloseTrainer)
+
+
+form_show(YADGUI[1])
+form_hide(YADGUI[24])
+form_hide(YADGUI[73])
+form_hide(YADGUI[74])
+form_hide(YADGUI[100])
+form_hide(YADGUI[101])
+form_hide(YADGUI[102])
+
+</LuaScript>
+</CheatTable>

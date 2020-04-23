@@ -1,0 +1,8 @@
+Lower Base Level Hack
+
+Location:
+
+Com > CC > Utils > SecNumber64
+
+Function:
+Public function Get() : Number

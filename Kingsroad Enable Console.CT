@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="27">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>143</ID>
+      <Description>"Enable Console Button"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+
+
+
+
+ Luacall(Aobswap("46 ?? ?? 00 11 02 00 00 27 d5    ", "46 ?? ?? 00 11 02 00 00 26 d5  "))
+
+
+
+
+[DISABLE]
+
+// SCRIPTS IN LOCAL &gt;&gt;   public static function IsQuestCompleted(param1:String) : Boolean
+
+
+// public static function IsQuestCompleted(param1:String) : Boolean
+//        {
+//            var _loc_2:* = @4744[param1];
+//            if (_loc_2 != null)
+//            {
+//                return _loc_2.state == 2;
+//            }
+//            return false;
+//        }// end function
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

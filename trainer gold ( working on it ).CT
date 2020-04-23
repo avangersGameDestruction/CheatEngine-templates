@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="27">
+  <Forms>
+    <TWFpbkZvcm0 Class="TCEForm" Encoding="Ascii85">b(@j^!Y}_$[eWqj3;pu^i)X8.5_o3U3:5l?A.//JoNU)um8}UPfxs8::vTI_G0?:c+QR.ir+HeMNRrz(D,SkRm?Eo*+E6SZGMM^e/.ccEu71e+XG{)8u6^_X%cjaA:Mlum;XWS3S%h%).xiiSB{klQ%yHPnbao6$lTZ=p6[)Od4qpbipuyN7bR.GNOgUjRzn?q#0*i;e@7LfA(6C!a4Me!!;%RqlSQ_sHyRlTtsibnTalA=$Z*D8^u)i%tB,bEr!$HIqsVGJp)-9ww]_q(6Wv:]=BvjrHVqXtn/$tk7fvwLtXSD2E4-_Mc1NA!/SiMi,CtLXC298tst)/j{v*PEyLW[zX^7K/?.MG2T8Z402o1^n!i9KWmb4Z(zDG^%UbQ=e%obSr(4PDD518/QCoNWcl8-ZdXpwzN[tsCQrf*ML%5Q(E^SimA{pWV$G;-:V*^$?X;=COr*264O*U+iv3]T,</TWFpbkZvcm0>
+    <YXZhbmdlcnNoYWNraW5nZm9ybQ Class="TCEForm" Encoding="Ascii85">OJiVQ2nldAU:MM2b.}cxm5Pjr%1Fvh$w_*h%a08AD?qJE(5O#ltV^{I?kvc9Va^Y@@GMB1(nRL3z]z]mU%.%%$QquRQj*;!z^u^LSWuFgpT^QXk)iuatdLZxkXV,Om!4Ww%*kHu</YXZhbmdlcnNoYWNraW5nZm9ybQ>
+  </Forms>
+  <CheatEntries/>
+  <UserdefinedSymbols/>
+  <LuaScript>-- TWFpbkZvcm0
+
+TWFpbkZvcm0.show()
+form_hide(YXZhbmdlcnNoYWNraW5nZm9ybQ)
+
+TWFpbkZvcm0.VXNlcm5hbWU.Text = ""
+TWFpbkZvcm0.cGFzc3dvcmQ.Text = ""
+
+function ZW5jcnlwdGVkTG9naW5GdW5jdGlvbnM(sender)
+if TWFpbkZvcm0.VXNlcm5hbWU.Text ~= 'avangers' then return end
+if TWFpbkZvcm0.cGFzc3dvcmQ.Text ~= 'hacking' then
+
+TWFpbkZvcm0.VXNlcm5hbWU.Text = ""
+TWFpbkZvcm0.cGFzc3dvcmQ.Text = ""
+return
+showMessage("wrong login")
+else
+form_hide(TWFpbkZvcm0)
+form_show(YXZhbmdlcnNoYWNraW5nZm9ybQ)
+end
+end
+
+-- YXZhbmdlcnNoYWNraW5nZm9ybQ
+
+
+</LuaScript>
+</CheatTable>

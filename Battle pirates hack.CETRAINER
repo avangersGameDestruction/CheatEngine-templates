@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries/>
+  <UserdefinedSymbols/>
+  <LuaScript>----------------------------------------- VARIABLES -----------------------------------------
+title="Hack By avangers"
+credits="avangers"
+credits=    "avangers"
+white=      "0x0052D6E9"
+black=      "0x00000000"
+DeepPink= 	"0xFF1493"
+red=        "0x00000FFF"
+green=      "0x0000FF00"
+Dark=       "0x0052D6E9"
+list=       "0x00CA59C7"
+
+
+function setHack_Information()
+  t =
+  {
+
+{'Enable this first',[[
+LuaCall(Aobswap("27 63 04 27 63 05 27 63 06 20 80 04 63 07 20 80 04 63 08 20 80 04 63 09 20 85 63 0A 20 85 63 0B 20 80 68 63 0C 20 85 63 0D 60 85 5E D1 66","47"))
+LuaCall(Aobswap("57 2A D5 30 65 01 20 85 6D 01 65 01 20 80 50 6D 02 65 01 20 80 04 6D 03 65 01 2C 01 6D 01 65 01 2C E0 99 02 6D 01 60 07 66 D3 02 60 07 66 96 03 AB 2A 12 0D 00 00","47"))]],
+[[By avangers_hacking
+Hack By avangers]]},
+
+{'Bypass uranium',
+[[LuaCall(Aobswap("D0 66 ?? 24 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 01 ?? ?? ?? ?? ?? ?? ?? ?? 01 ??","2D 01 48"))]],
+[[avangers]]},
+
+{'Max Retro',
+[[LuaCall(Aobswap("D2 62 04 66 15 24 01 AB 12 0B 00 00 2C","d2 d3 d3 66 ?? 24 0e a0 4f ?? ?? ?? ??"))]],
+[[avangers]]},
+
+{'Insta Retro',
+[[LuaCall(Aobswap("60 FB 11 60 38 66 6F 4F 62 01 60 A0 27 60 FB 11 46 5F 00 62 07 66 8C 01 A0 4F 62 01","60 ?? ?? 60 ?? 66 ?? 4f ?? ?? 60 ?? ?? 60 ?? ?? 46 ?? ?? 24 00 66 ?? ?? a0 4f ?? ??"))]],
+[[avangers]]},
+
+{'Gold hack',
+[[LuaCall(Aobswap("D0 66 ?? ?? 46 ?? 00 48","2d 01 48"))]],
+[[avangers]]},
+
+{'Unlock all Bleuprints',
+[[LuaCall(Aobswap("D0 30 60 9F 02 46 13 00 60 C6 01 66 DE 15 D1 46 CE 1E 02 80 C6 01 D6 D2 20 AB 96 48","26 48"))]],
+[[avangers]]},
+
+{'Map Speed Max',
+[[LuaCall(Aobswap("D0 30 20 80 C0 02 D5 24 00 D6 60 38 66 87 09 25 C8 01 0C 0B 00 00 D0 66 9E 19 46 5F 00 24 02 A2 48","d0 30 2d db 02 48 d6 60 ?? 66 ?? ?? 25 c8 01 0c 0a 00 00 60 ?? ?? 46 ?? ?? 24 02 a2 48 ?? ?? ?? ??"))]],
+[[avangers]]},
+
+{'Bypass afk',
+[[LuaCall(Aobswap("d0 30 57 2A d5 30 65 ?? 20 80 ?? 6d 01 60 ?? ??","d0 30 47 ?? d5 30 65 ?? 20 80 ?? 6d 01 60 ?? ??"))]],
+[[avangers]]},
+
+
+
+
+
+}
+end
+----------------------------------------- MAIN GUI -----------------------------------------
+
+MAXGUI     	= {}
+MAXGUI[1]  	= createForm(false)
+MAXGUI[5]  	= createGroupBox(MAXGUI[1])
+MAXGUI[6]  	= createLabel(MAXGUI[5])
+MAXGUI[9]  	= createLabel(MAXGUI[5])
+MAXGUI[10] 	= createComboBox(MAXGUI[5])
+MAXGUI[11] 	= createGroupBox(MAXGUI[1])
+MAXGUI[12] 	= createButton(MAXGUI[5])
+MAXGUI[14] 	= createLabel(MAXGUI[11])
+MAXGUI[15]		= createListBox(MAXGUI[11])
+MAXGUI[16] 	= createButton(MAXGUI[11])
+MAXGUI[17] 	= createButton(MAXGUI[11])
+MAXGUI[18]		= createLabel(MAXGUI[11])
+MAXGUI[19] 	= createLabel(MAXGUI[11])
+MAXGUI[23] 	= createButton(MAXGUI[11])
+MAXGUI[24] 	= createListBox(MAXGUI[11])
+MAXGUI[25] 	= createCheckBox(MAXGUI[24])
+MAXGUI[26] 	= createCheckBox(MAXGUI[24])
+MAXGUI[27] 	= createCheckBox(MAXGUI[24])
+MAXGUI[28] 	= createCheckBox(MAXGUI[24])
+MAXGUI[29] 	= createCheckBox(MAXGUI[24])
+MAXGUI[30] 	= createCheckBox(MAXGUI[24])
+MAXGUI[31] 	= createCheckBox(MAXGUI[24])
+MAXGUI[81] 	= createCheckBox(MAXGUI[24])
+MAXGUI[82] 	= createCheckBox(MAXGUI[24])
+MAXGUI[83] 	= createCheckBox(MAXGUI[24])
+MAXGUI[84] 	= createCheckBox(MAXGUI[24])
+MAXGUI[85] 	= createCheckBox(MAXGUI[24])
+
+MAXGUI[500]  	= createLabel(MAXGUI[1])
+
+MAXGUI[70] 	= createButton(MAXGUI[11])
+MAXGUI[71] 	= createButton(MAXGUI[11])
+MAXGUI[72] 	= createButton(MAXGUI[11])
+MAXGUI[73] 	= createButton(MAXGUI[11])
+MAXGUI[74] 	= createButton(MAXGUI[11])
+MAXGUI[40]		= createLabel(MAXGUI[24])
+MAXGUI[41]		= createLabel(MAXGUI[24])
+MAXGUI[42]		= createLabel(MAXGUI[24])
+MAXGUI[43]		= createLabel(MAXGUI[24])
+MAXGUI[44]		= createLabel(MAXGUI[24])
+MAXGUI[45]		= createLabel(MAXGUI[24])
+MAXGUI[45]		= createLabel(MAXGUI[24])
+MAXGUI[46]		= createLabel(MAXGUI[24])
+MAXGUI[47]		= createLabel(MAXGUI[24])
+MAXGUI[48]		= createLabel(MAXGUI[24])
+MAXGUI[49]		= createLabel(MAXGUI[24])
+MAXGUI[50]		= createLabel(MAXGUI[24])
+MAXGUI[51]		= createLabel(MAXGUI[24])
+
+
+ --INGAME PAGE 2 INFO
+
+ --INGAME PAGE 2 BUTTON
+MAXGUI[100] 	= createButton(MAXGUI[11])
+ --INGAME PAGE 1 BUTTON
+MAXGUI[101] 	= createButton(MAXGUI[11])
+ --INGAME PAGE 2 LISTBOX
+MAXGUI[102] 	= createListBox(MAXGUI[11])
+
+ --INGAME PAGE 2 CHECKBOXES
+MAXGUI[103] 	= createCheckBox(MAXGUI[102])
+MAXGUI[104] 	= createCheckBox(MAXGUI[102])
+MAXGUI[105] 	= createCheckBox(MAXGUI[102])
+
+
+-- INGAME PAGE 2 LABLES
+MAXGUI[115]		= createLabel(MAXGUI[102])
+MAXGUI[116]		= createLabel(MAXGUI[102])
+MAXGUI[117]		= createLabel(MAXGUI[102])
+
+
+
+
+
+----------------------------------------- PROPERTIES -----------------------------------------
+
+setProperty(MAXGUI[1] , "color", black)
+setProperty(MAXGUI[1] , "ShowInTaskBar", 'stAlways')
+setProperty(MAXGUI[1] , "Position", "ScreenCenter")
+setProperty(MAXGUI[1] , "BiDiMode", "bdLeftToRight")
+
+FontHeight = getProperty(MAXGUI[5] , "Font")
+setProperty(FontHeight , "Height", "26")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[6] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[9] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[10] , "Font")
+setProperty(FontHeight , "Height", "18")
+setProperty(MAXGUI[10] , "ReadOnly", "True")
+
+FontHeight = getProperty(MAXGUI[12] , "Font")
+setProperty(FontHeight , "Height", "13")
+
+FontHeight = getProperty(MAXGUI[14] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "22")
+setProperty(FontHeight , "Color", blue)
+
+FontHeight = getProperty(MAXGUI[15] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "19")
+setProperty(FontHeight , "Color", green)
+setProperty(MAXGUI[15], "Color", black)
+setProperty(MAXGUI[31], "Color", green)
+
+FontHeight = getProperty(MAXGUI[18] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "22")
+setProperty(FontHeight , "Color", blue)
+
+FontHeight = getProperty(MAXGUI[19] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[24] , "Font")
+setProperty(FontHeight , "Height", "18")
+setProperty(MAXGUI[24], "Color", black)
+
+FontHeight = getProperty(MAXGUI[40] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[41] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[42] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[43] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[44] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[45] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[46] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[47] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[48] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[49] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[50] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[51] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+
+FontHeight = getProperty(MAXGUI[102] , "Font")
+setProperty(FontHeight , "Height", "18")
+setProperty(MAXGUI[102], "Color", black)
+
+FontHeight = getProperty(MAXGUI[115] , "Font")
+setProperty(FontHeight , "Height", "20")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[116] , "Font")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", green)
+
+FontHeight = getProperty(MAXGUI[117] , "Font")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", black)
+
+FontHeight = getProperty(MAXGUI[500] , "Font")
+
+setProperty(FontHeight , "Style", "[fsitalic ]")
+setProperty(FontHeight , "Height", "50")
+setProperty(FontHeight , "Color", green)
+
+
+
+
+
+-----------------------------------------SIZE + POS -----------------------------------------
+
+control_setSize(MAXGUI[1], 280, 440)
+x,y = control_getSize(MAXGUI[1])
+
+-- TOP BOX BORDER
+control_setSize(MAXGUI[5], 270, 120)
+control_setPosition(MAXGUI[5], 5, 60)
+
+--SELECT YOUR BROWSER
+control_setPosition(MAXGUI[6], 10, 11)
+
+ --ATTACH PID TEXT
+control_setPosition(MAXGUI[9], 10, 75)
+
+ --COMBO BOX
+control_setSize(MAXGUI[10], 170, 21)
+control_setPosition(MAXGUI[10], 10, 35)
+
+-- BOTTOM BOX BORDER
+control_setSize(MAXGUI[11], 270, 230)
+control_setPosition(MAXGUI[11], 5, 180)
+
+ --BROWSER SELECT BUTTON
+control_setSize(MAXGUI[12], 70, 28)
+control_setPosition(MAXGUI[12], 190, 35)
+
+ --LIST OF HACKS FOR GAME
+control_setPosition(MAXGUI[14], 9, -2)
+
+ --LIST BOX
+control_setSize(MAXGUI[15], 180, 190)
+control_setPosition(MAXGUI[15], 10, 15)
+
+-- ENABLE SELECTED
+control_setSize(MAXGUI[16], 70, 28)
+control_setPosition(MAXGUI[16], 190, 15)
+
+-- ENABLE ALL
+control_setSize(MAXGUI[17], 70, 28)
+control_setPosition(MAXGUI[17], 190, 45)
+
+--DESCRIPTION TEXT
+control_setPosition(MAXGUI[18], 10, 300)
+
+-- NO HACKS SELECTED TEXT
+control_setPosition(MAXGUI[19], 11, 325)
+
+-- RESET ALL
+control_setSize(MAXGUI[23], 70, 28)
+control_setPosition(MAXGUI[23], 190, 75)
+
+ --IN GAME HACKS BOX
+control_setSize(MAXGUI[24], 180, 190)
+control_setPosition(MAXGUI[24], 10, 15)
+
+--CHECK BOXES
+control_setPosition(MAXGUI[25], 3, 2)
+control_setPosition(MAXGUI[26], 3, 17)
+control_setPosition(MAXGUI[27], 3, 33)
+control_setPosition(MAXGUI[28], 3, 48)
+control_setPosition(MAXGUI[29], 3, 63)
+control_setPosition(MAXGUI[30], 3, 78)
+control_setPosition(MAXGUI[31], 3, 93)
+control_setPosition(MAXGUI[81], 3, 108)
+control_setPosition(MAXGUI[82], 3, 123)
+control_setPosition(MAXGUI[83], 3, 138)
+control_setPosition(MAXGUI[84], 3, 153)
+control_setPosition(MAXGUI[85], 3, 168)
+
+-- CHECK BOX TEXT
+control_setPosition(MAXGUI[40], 10, 2)
+control_setPosition(MAXGUI[41], 10, 17)
+control_setPosition(MAXGUI[42], 10, 33)
+control_setPosition(MAXGUI[43], 10, 48)
+control_setPosition(MAXGUI[44], 10, 63)
+control_setPosition(MAXGUI[45], 10, 78)
+control_setPosition(MAXGUI[46], 10, 93)
+control_setPosition(MAXGUI[47], 10, 108)
+control_setPosition(MAXGUI[48], 10, 123)
+control_setPosition(MAXGUI[49], 10, 138)
+control_setPosition(MAXGUI[50], 10, 153)
+control_setPosition(MAXGUI[51], 10, 168)
+
+-- IN GAME HACKS BUTTON
+control_setSize(MAXGUI[70], 70, 28)
+control_setPosition(MAXGUI[70], 190, 135)
+
+-- F FACEBOOK
+control_setSize(MAXGUI[71], 70, 28)
+control_setPosition(MAXGUI[71], 190, 165)
+
+-- INFO MIAN
+control_setSize(MAXGUI[72], 70, 28)
+control_setPosition(MAXGUI[72], 190, 105)
+
+-- INFO IN GAME
+control_setSize(MAXGUI[73], 70, 28)
+control_setPosition(MAXGUI[73], 190, 105)
+
+-- IN GAME HACKS BUTTON
+control_setSize(MAXGUI[74], 70, 28)
+control_setPosition(MAXGUI[74], 190, 135)
+
+-- IN GAME PAGE 2 HACKS BUTTON
+control_setSize(MAXGUI[100], 70, 28)
+control_setPosition(MAXGUI[100], 190, 75)
+
+-- IN GAME PAGE 1 HACKS BUTTON
+control_setSize(MAXGUI[101], 70, 28)
+control_setPosition(MAXGUI[101], 190, 75)
+
+-- IN GAME HACKS BOX 2
+control_setSize(MAXGUI[102], 180, 190)
+control_setPosition(MAXGUI[102], 10, 15)
+
+-- IN GMAE PAGE 2 CHECK BOXES
+control_setPosition(MAXGUI[103], 3, 3)
+control_setPosition(MAXGUI[104], 3, 23)
+control_setPosition(MAXGUI[105], 3, 43)
+
+
+-- IN GAME PAGE 2 CHECK BOX TEXT
+control_setPosition(MAXGUI[115], 10, 3)
+control_setPosition(MAXGUI[116], 10, 23)
+control_setPosition(MAXGUI[117], 10, 43)
+
+--control_setPosition(MAXGUI[500], 25, -50)
+----------------------------------------- CAPTION -----------------------------------------
+control_setCaption(MAXGUI[1], 	title.." ")
+control_setCaption(MAXGUI[6], 	"SELECT BROWSER - ATTACH PID")
+control_setCaption(MAXGUI[9], 	"PID: waiting...")
+control_setCaption(MAXGUI[12], "Select")
+control_setCaption(MAXGUI[14], "LIST OF HACKS FOR WC:")
+control_setCaption(MAXGUI[16], 'ENABLE ')
+control_setEnabled(MAXGUI[16], false)
+control_setCaption(MAXGUI[17], 'ENABLE All')
+control_setEnabled(MAXGUI[17], false)
+control_setCaption(MAXGUI[18],	"Description:")
+control_setCaption(MAXGUI[19],	"No Hack(s) Selected")
+control_setCaption(MAXGUI[23], "Reset All")
+--control_setCaption(MAXGUI[25], "                       ")
+--control_setCaption(MAXGUI[26], "                       ")
+--control_setCaption(MAXGUI[27], "                       ")
+--control_setCaption(MAXGUI[28], "                       ")
+--control_setCaption(MAXGUI[29], "                       ")
+--control_setCaption(MAXGUI[30], "                       ")
+--control_setCaption(MAXGUI[31], "                       ")
+control_setCaption(MAXGUI[40], "   INFANTRY UNITS ADD")
+control_setCaption(MAXGUI[41], "   GROUND UNITS ADD")
+control_setCaption(MAXGUI[42], "   AIR UNITS ADD")
+control_setCaption(MAXGUI[43], "   MERC UNITS ADD")
+control_setCaption(MAXGUI[44], "   GOGO-BAR HACK")
+control_setCaption(MAXGUI[45], "   BASE REPAIR")
+control_setCaption(MAXGUI[46], "   TIME INCREASE")
+control_setCaption(MAXGUI[47], "   DRONE SILO UNLOCK")
+control_setCaption(MAXGUI[48], "   ROCKET SILO UNLOCK")
+control_setCaption(MAXGUI[49], "   MERCENERY CAMP UNLOCK")
+control_setCaption(MAXGUI[50], "   TROPHY UNLOCK")
+control_setCaption(MAXGUI[51], "   UPGRADE MORE WITH GOGO")
+control_setCaption(MAXGUI[115], "  EXTRA TURRET UNLOCK")
+
+control_setCaption(MAXGUI[500],"   Battle pirates")
+
+
+control_setCaption(MAXGUI[70], 'In-Game')
+control_setCaption(MAXGUI[71], 'Facebook')
+control_setCaption(MAXGUI[72], 'Admin')
+control_setCaption(MAXGUI[73], 'Admin')
+control_setCaption(MAXGUI[74], 'Pre-Game Hacks')
+control_setCaption(MAXGUI[100], 'PAGE 2')
+control_setCaption(MAXGUI[101], 'PAGE 1')
+
+
+
+
+
+----------------------------------------- PROGRESSBAR  -----------------------------------------
+MAXGUI[20] = createProgressBar(MAXGUI[11])
+control_setPosition(MAXGUI[20], 11, 300)
+control_setSize(MAXGUI[20], 255, 14)
+control_setVisible(MAXGUI[20], false)
+MAXGUI[21]  = createLabel(MAXGUI[11])
+FontHeight = getProperty(MAXGUI[21] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+setProperty(FontHeight , "Color", white)
+control_setPosition(MAXGUI[21], 10, 355)
+control_setVisible(MAXGUI[21], false)
+MAXGUI[22]  = createLabel(MAXGUI[11])
+FontHeight = getProperty(MAXGUI[22] , "Font")
+setProperty(FontHeight , "Style", "[fsBold]")
+setProperty(FontHeight , "Height", "18")
+control_setPosition(MAXGUI[22], 10, 315)
+control_setVisible(MAXGUI[22], false)
+
+----------------------------------------- COMBOBOX CONTENT -----------------------------------------
+setHack_Information()
+al = combobox_getItems(MAXGUI[10])
+strings_clear(al)
+strings_add(al, 'Browser list...')
+strings_add(al, 'Google Chrome')
+strings_add(al, 'chedot')
+strings_add(al, 'Baidu')
+strings_add(al, 'SeaMonkey')
+strings_add(al, 'Firefox')
+strings_add(al, 'Internex Explorer')
+setProperty(MAXGUI[10] , "ItemIndex", "0")
+all_enabled = 0
+success = 1
+TeL = listbox_getItems(MAXGUI[15])
+TempSave = {}
+strings_clear(TeL)
+check = 0
+i = 0
+repeat
+if t[i+1]==nil then
+	check = 1
+else
+	i = i+1
+	strings_add(TeL, t[i][1])
+	TempSave[i] = {}
+	TempSave[i][1] = t[i][1]
+	TempSave[i][2] = t[i][2]
+	TempSave[i][3] = t[i][3]
+	TempSave[i][4] = 2
+	TempSave[i][5] = 0
+	check = 0
+end
+until check == 1
+
+errorOnLookupFailure(false)
+alreadycheckedPIDS={}
+openNextProcTimer = createTimer(nil,false)
+timer_setInterval(openNextProcTimer, 1000)
+timer_onTimer(openNextProcTimer,
+function(sender)
+	local tempPIDtable = getPids()
+	if #tempPIDtable == 0 then return end
+	timer_setEnabled(sender,false)
+	openProcess(tempPIDtable[1])
+end)
+
+----------------------------------------- CHECKPROCESS / PIDS -----------------------------------------
+
+function checkProcessMajor()
+	reinitializeSymbolhandler()
+	if getAddress("pepflashplayer.dll")~=0 or getAddress("AdobeCPGetAPI") ~=0 then
+		return true
+	end
+	return false
+end
+
+function getPids()
+	local SL=createStringlist()
+	getProcesslist(SL)
+	local tempPIDtable={}
+	for i=0,strings_getCount(SL)-1 do
+		local entry = strings_getString(SL,i)
+		local processname = entry:sub(10,255)
+		local PID = tonumber('0x'..entry:sub(1,8))
+		if processname == "chrome.exe" then
+			if alreadycheckedPIDS[PID]~=true then
+				table.insert(tempPIDtable,PID)
+			end
+		end
+	end
+	object_destroy(SL)
+	return tempPIDtable
+end
+
+function checkProcess(sender)
+	timer_setEnabled(sender,false)
+	alreadycheckedPIDS[getOpenedProcessID()]=true
+	if checkProcessMajor() then
+		timer_setEnabled(openNextProcTimer,false)
+		alreadycheckedPIDS={}
+		enableHacks()
+	else
+		timer_setEnabled(openNextProcTimer,true)
+	end
+end
+
+checkProcessTimer = createTimer(nil,false)
+timer_setInterval(checkProcessTimer, 100)
+timer_onTimer(checkProcessTimer, checkProcess)
+
+function onOpenProcess()
+   if success == 1 then return end
+   timer_setEnabled(checkProcessTimer,true)
+end
+
+----------------------------------------- BROWSER SELECT -----------------------------------------
+
+function scanBrowser()
+	AttachItems = combobox_getItems(MAXGUI[10])
+	AttachIndex = combobox_getItemIndex(MAXGUI[10])
+    control_setEnabled(MAXGUI[16], false)
+	control_setEnabled(MAXGUI[17], false)
+    control_setEnabled(MAXGUI[23], false)
+	local font = getProperty(MAXGUI[9] , "Font")
+	setProperty(font, "Color", white)
+	control_setCaption(MAXGUI[9], "Attached to PID: " .. "Scanning Process...")
+	processMessages()
+	if AttachIndex == -1 then return end
+	if AttachIndex == 0 then
+		control_setCaption(MAXGUI[9], "Attached to PID: " .. "No Browser Selected.")
+		return
+	end
+
+    local check = strings_getString(AttachItems,AttachIndex)
+
+
+	if check == 'Google Chrome' then
+		success = 0
+		local test = openProcess("chrome.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(MAXGUI[9], "Attached to PID: " .. "Chrome is not founded")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"chrome.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+
+    if check == 'Firefox' or check == 'Internet Explorer' or check == 'SeaMonkey' then openProcess("FlashPlayerPlugin") end
+		errorOnLookupFailure(false)
+		reinitializeSymbolhandler()
+		err=getAddress("kernel32.dll")==0
+			if err==true then
+		setProperty(font , "Color", red)
+		control_setCaption(MAXGUI[9], "Attached to PID: " .. "Flash Player Plugin is not founded")
+	else
+		local PID=getOpenedProcessID()
+		setProperty(font, "Color", green)
+		control_setCaption(MAXGUI[9], "Attached to PID: " .. PID .. " - Flash Player Plugin")
+        control_setEnabled(MAXGUI[16], true)
+		control_setEnabled(MAXGUI[17], true)
+        control_setEnabled(MAXGUI[23], true)
+	end
+		local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'chedot' then
+		success = 0
+		local test = openProcess("chedot.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(MAXGUI[9], "Attached to PID: " .. "chedot is not founded")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"chedot.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+		local check = strings_getString(AttachItems,AttachIndex)
+	if check == 'Baidu' then
+		success = 0
+		local test = openProcess("spark.exe")
+		if test == nil then
+			setProperty(font , "Color", red)
+			control_setCaption(MAXGUI[9], "Attached to PID: " .. "chedot is not founded")
+			timer_setEnabled(openNextProcTimer,false)
+			return
+		end
+		strings_add(getAutoAttachList(),"spark.exe")
+		timer_setEnabled(openNextProcTimer,true)
+		return
+	end
+
+end
+
+----------------------------------------- ENABLE HACKS -----------------------------------------
+function enableHacks()
+	setProperty(getProperty(MAXGUI[9] , "Font"), "Color", green)
+	local PID=getOpenedProcessID()
+	local check = strings_getString(AttachItems,AttachIndex)
+    if check == 'Firefox' or check == 'Internet Explorer' then
+		control_setCaption(MAXGUI[9], "Attached to PID: " .. PID .. " - Flash Player Plugin")
+	elseif check == 'Google Chrome' then
+		control_setCaption(MAXGUI[9], "Attached to PID: " .. PID .. " - Google Chrome")
+	end
+	success = 1
+    control_setEnabled(MAXGUI[16], true)
+    control_setEnabled(MAXGUI[17], true)
+    control_setEnabled(MAXGUI[23], true)
+end
+
+----------------------------------------- PROGRESS BAR -----------------------------------------
+function show_progressbar()
+     control_setPosition(MAXGUI[22], 10, 320)
+     control_setCaption(MAXGUI[22], '')
+     control_setVisible(MAXGUI[18], false)
+     control_setVisible(MAXGUI[19], false)
+     control_setVisible(MAXGUI[20], true)
+     control_setVisible(MAXGUI[21], true)
+     control_setVisible(MAXGUI[22], true)
+     progressbar_setPosition(MAXGUI[20], 0)
+end
+
+function hide_progressbar()
+	 control_setVisible(MAXGUI[20], false)
+	 control_setVisible(MAXGUI[21], false)
+	 control_setVisible(MAXGUI[22], false)
+	 control_setVisible(MAXGUI[18], true)
+	 control_setVisible(MAXGUI[19], true)
+end
+
+----------------------------------------- EXECUTE HACKS -----------------------------------------
+function ExecuteHacks()
+    Pause()
+    HLS = listbox_getItemIndex(MAXGUI[15])
+    LIST = listbox_getItems(MAXGUI[15])
+    if HLS == -1 then return end
+    i = HLS+1
+    font=getProperty(MAXGUI[21], 'Font')
+    control_setVisible(MAXGUI[18], false)
+    control_setVisible(MAXGUI[19], false)
+    control_setVisible(MAXGUI[20], false)
+    control_setVisible(MAXGUI[21], true)
+    control_setVisible(MAXGUI[22], false)
+    if t[i][2]==nil then
+         setProperty(font, 'Color', white)
+         control_setCaption(MAXGUI[21], "You allready Enabled this hack !")
+         unpause()
+         return
+    end
+    control_setEnabled(MAXGUI[16], false)
+    control_setEnabled(MAXGUI[17], false)
+
+    control_setCaption(MAXGUI[21], "Enabling hack...")
+    control_setVisible(MAXGUI[22], true)
+    control_setCaption(MAXGUI[22], '')
+    control_setPosition(MAXGUI[22], 10, 185)
+    strings_setString(LIST, HLS, t[i][1])
+    processMessages()
+    if TempSave[i][4] == 2 then
+      Asm = autoAssemble(t[i][2])
+      font=getProperty(MAXGUI[22], 'Font')
+      control_setCaption(MAXGUI[21], "Enabling Hack(s). Finished.")
+      unpause()
+      if AobSwapCheck~=true then
+        TempText = t[i][1]..' - Failed'
+        TempSave[i][5] = t[i][1]..' - Failed'
+        strings_setString(LIST, HLS, TempText)
+        setProperty(font, 'Color', red1)
+        control_setCaption(MAXGUI[22], 'Failed to Enable !\nHack allready Enabled or game was updated.')
+        unpause()
+ else
+        TempText = t[i][1]..' - Enabled'
+        TempSave[i][5] = t[i][1]..' - Enabled'
+        strings_setString(LIST, HLS, TempText)
+        setProperty(font, 'Color', green)
+        control_setCaption(MAXGUI[22], 'Hack Enabled. Enjoy it !')
+unpause()
+t[i][2] = nil
+        TempSave[i][4] = 1
+      end
+    end
+    if TempSave[i][4] == 0 then TempSave[i][4] = 2 end
+    control_setEnabled(MAXGUI[16], true)
+    control_setEnabled(MAXGUI[17], true)
+
+end
+
+----------------------------------------- EXECUTE ALL HACKS  -----------------------------------------
+function ExecuteAllHacks()
+         Pause()
+     font=getProperty(MAXGUI[21], 'Font')
+     if all_enabled == 1 then
+        control_setVisible(MAXGUI[18], false)
+        control_setVisible(MAXGUI[19], false)
+        control_setVisible(MAXGUI[20], false)
+        control_setVisible(MAXGUI[21], true)
+        control_setVisible(MAXGUI[22], false)
+        setProperty(font, 'Color', white)
+        control_setCaption(MAXGUI[21], "You allready Enabled all hacks !")
+        unpause()
+        return
+     end
+     lb = listbox_getItems(MAXGUI[15])
+     LIST = listbox_getItems(MAXGUI[15])
+     control_setEnabled(MAXGUI[16], false)
+     control_setEnabled(MAXGUI[17], false)
+     control_setEnabled(MAXGUI[23], false)
+     show_progressbar()
+     progressbar_setMax(MAXGUI[20], strings_getCount(lb))
+     for i = 1, strings_getCount(lb) do
+         strings_setString(LIST, i-1, t[i][1])
+     end
+	 count = 0
+     for i = 1, strings_getCount(lb) do
+          control_setCaption(MAXGUI[21], "Enabling hack: "..t[i][1])
+          progressbar_setPosition(MAXGUI[20], i)
+          processMessages()
+		  if TempSave[i][4] == 2 then
+		        Asm = autoAssemble(t[i][2])
+				if AobSwapCheck~=true then
+                    TempSave[i][5] = t[i][1]..' - Failed'
+                    strings_setString(LIST, i-1, TempSave[i][5])
+ 				else
+	                TempSave[i][5] = t[i][1]..' - Enabled'
+                    strings_setString(LIST, i-1, TempSave[i][5])
+	                t[i][2] = nil
+					TempSave[i][4] = 1
+					count = count + 1
+				 end
+		   else
+  				count = count + 1
+                 TempSave[i][5] = t[i][1]..' - Enabled'
+                 strings_setString(LIST, i-1, TempSave[i][5])
+		   end
+		if TempSave[i][4] == 0 then TempSave[i][4] = 2 end
+	end
+    control_setEnabled(MAXGUI[16], true)
+    control_setEnabled(MAXGUI[17], true)
+    control_setEnabled(MAXGUI[23], true)
+    control_setCaption(MAXGUI[21], "Enabling hack(s). Finished ! ")
+    font=getProperty(MAXGUI[22], 'Font')
+	if count == strings_getCount(lb) then
+		setProperty(font, 'Color', white)
+        control_setCaption(MAXGUI[22], 'All hacks Enabled. Enjoy it !')
+        all_enabled = 1
+        unpause()
+    else
+		diff = strings_getCount(lb) - count
+        if diff == 1 then
+           text = "hack"
+        else
+           text = "hacks"
+        end
+        setProperty(font, 'Color', red)
+	    control_setCaption(MAXGUI[22], 'Failed to Enable ' .. diff .. ' ' .. text .. ' !\nHack(s) allready Enabled or game was updated.')
+        unpause()
+	end
+        unpause()
+end
+
+----------------------------------------- RESET HACKS  -----------------------------------------
+function ResetAllHacks()
+     lb = listbox_getItems(MAXGUI[15])
+     ct = strings_getCount(lb)
+     for i = 1, ct do
+         strings_setString(lb, i-1, t[i][1])
+         TempSave[i][4] = 2
+         t[i][2]= TempSave[i][2]
+     end
+     all_enabled = 0
+     hide_progressbar()
+     control_setVisible(MAXGUI[19], false)
+     control_setCaption(MAXGUI[18], 'All hacks reseted.')
+end
+
+----------------------------------------- AOB SWAP -----------------------------------------
+function DEC_HEX(IN)
+	local B,K,OUT,I,D=16,"0123456789ABCDEF","",0
+	 if IN&lt;1 then
+		OUT=0
+		return OUT
+	end
+	while IN&gt;0 do
+		I=I+1
+		IN,D=math.floor(IN/B),math.mod(IN,B)+1
+		OUT=string.sub(K,D,D)..OUT
+	end
+	return OUT
+end
+
+function Aobswap(search, change)
+     aobs = AOBScan(search, "+W*X")
+     if(aobs == nil) then
+		AobSwapCheck=false
+	 else
+		 j = stringlist_getCount(aobs)
+		for i = 1, j do
+			 address=stringlist_getString(aobs,i-1)
+			 for i = 1, string.len(change), 3 do
+				 z = string.sub(change, i, i+2)
+				 x, y = string.find(z, "%?+")
+				  if (x == nil) then
+					 script=[[
+					 ]]..address.."+"..(DEC_HEX((i-1)/3))..[[:
+					 db ]]..z..[[
+					 ]]
+					 autoAssemble(script)
+				 end
+			 end
+		 end
+		object_destroy(aobs);
+		aobs=nil
+		AobSwapCheck=true
+	end
+end
+
+function AOBSwap(search, change)
+     aobs = AOBScan(search, "-W*X")
+     if(aobs == nil) then
+		AobSwapCheck=false
+	 else
+		 j = stringlist_getCount(aobs)
+		for i = 1, j do
+			 address=stringlist_getString(aobs,i-1)
+			 for i = 1, string.len(change), 3 do
+				 z = string.sub(change, i, i+2)
+				 x, y = string.find(z, "%?+")
+				  if (x == nil) then
+					 script=[[
+					 ]]..address.."+"..(DEC_HEX((i-1)/3))..[[:
+					 db ]]..z..[[
+					 ]]
+					 autoAssemble(script)
+				 end
+			 end
+		 end
+		object_destroy(aobs);
+		aobs=nil
+		AobSwapCheck=true
+	end
+end
+
+
+----------------------------------------- HACK DESCRIPTION -----------------------------------------
+function HackDescriptionsChange()
+    hide_progressbar()
+    control_setCaption(MAXGUI[18], 'Description:')
+    HLS = listbox_getItemIndex(MAXGUI[15])
+    if HLS == -1 then return end
+    i = HLS+1
+    if t[i][3]~='' and t[i][3]~=nil then
+		control_setCaption(MAXGUI[19] ,t[i][3])
+    else
+		control_setCaption(MAXGUI[19], "No description available.")
+    end
+end
+
+---------------------------------------- EXIT -----------------------------------------
+
+ function CloseTrainer()
+   form_hide(MAXGUI[1])
+   closeCE()
+  end
+
+------------------------------------ IN GAME HACKS PAGE 2--------------------------------
+
+function INGAME_HACKS_PAGE_2()
+         form_hide(MAXGUI[16])
+         form_hide(MAXGUI[17])
+         form_hide(MAXGUI[23])
+         form_hide(MAXGUI[15])
+         form_hide(MAXGUI[70])
+         form_hide(MAXGUI[24])
+         form_show(MAXGUI[73])
+         form_show(MAXGUI[74])
+         form_hide(MAXGUI[100])
+         form_show(MAXGUI[101])
+         form_show(MAXGUI[102])
+
+end
+
+----------------------------------------- IN GAME HACKS -----------------------------------------
+function INGAME_HACKS()
+         form_hide(MAXGUI[16])
+         form_hide(MAXGUI[17])
+         form_hide(MAXGUI[23])
+         form_hide(MAXGUI[15])
+         form_hide(MAXGUI[70])
+         form_show(MAXGUI[24])
+         form_show(MAXGUI[73])
+         form_show(MAXGUI[74])
+         form_show(MAXGUI[100])
+         form_hide(MAXGUI[101])
+
+end
+
+----------------------------------------- MAX FACEBOOK  -----------------------------------------
+function MAX_Facebook()
+         showMessage("Admin:ARYAN KHAN DJ/Mike De Greve Lauwen AVENGERS")
+         ShellExecute("https://www.facebook.com/groups/277911699274440/")
+         ShellExecute("https://www.facebook.com/groups/746998952109642/")
+
+
+         ShellExecute("https://www.facebook.com/profile.php?id=100013219533198")
+         ShellExecute("https://www.facebook.com/profile.php?id=100008243537197")
+end
+
+----------------------------------------- INFO MAIN -----------------------------------------
+--function Info_Main()
+         --form_hide(MAXGUI[1])
+         --form_show(Pregame_Info)
+--end
+
+----------------------------------------- INFO MAIN -----------------------------------------
+--function Info_Ingame()
+         --form_hide(MAXGUI[1])
+         --form_show(Ingame_Info)
+--end
+
+
+----------------------------------------- Admin -----------------------------------------
+function Admin()
+showMessage("Admins:ARYAN KHAN  DJ/MIKE DE GREVEW LAUWEN   AVENGERS")
+ShellExecute("https://www.facebook.com/profile.php?id=100013219533198")
+ShellExecute("https://www.facebook.com/profile.php?id=100008243537197")
+end
+
+----------------------------------------- PRE GAME HACKS -----------------------------------------
+function Pregame_Hacks()
+         form_show(MAXGUI[16])
+         form_show(MAXGUI[17])
+         form_show(MAXGUI[23])
+         form_show(MAXGUI[15])
+         form_show(MAXGUI[70])
+         form_hide(MAXGUI[24])
+         form_hide(MAXGUI[73])
+         form_hide(MAXGUI[74])
+         form_hide(MAXGUI[100])
+         form_hide(MAXGUI[101])
+         form_hide(MAXGUI[102])
+end
+
+-------------------------------------- CHECKBOX FUNCTIONS --------------------------------------
+
+
+function INF_ADD()
+
+if (checkbox_getState(MAXGUI[25]) == 1) then
+
+Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 B4 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 03 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 0D 00 00 00 2C 01 00 00 14 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 0D 00 00 00 22 01 00 00 14 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 05 00 00 00 04 01 00 00 05 00 00 00 0A 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 DC 00 00 00 00 00 00 00 0A 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 03 00 00 00 F0 00 00 00 05 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 06 00 00 00 96 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 06 00 00 00 8C 00 00 00 05 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 06 00 00 00 82 00 00 00 05 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 18 01 00 00 05 00 00 00 0A 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 0E 01 00 00 05 00 00 00 0A 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 D2 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+Aobswap("?? ?? ?? ?? 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 0A","01 00 00 00 00")
+Aobswap("?? ?? ?? ?? 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 28","01 00 00 00 00")
+Aobswap("?? ?? ?? ?? 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 1E","01 00 00 00 00")
+Aobswap("?? ?? ?? ?? 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 14","01 00 00 00 00")
+
+
+    checkbox_setState(MAXGUI[25], 2)
+  else
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 B4 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 03 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 0D 00 00 00 2C 01 00 00 14 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 0D 00 00 00 22 01 00 00 14 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 05 00 00 00 04 01 00 00 05 00 00 00 0A 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 DC 00 00 00 00 00 00 00 0A 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 03 00 00 00 F0 00 00 00 05 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 06 00 00 00 96 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 06 00 00 00 8C 00 00 00 05 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 06 00 00 00 82 00 00 00 05 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 18 01 00 00 05 00 00 00 0A 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 0E 01 00 00 05 00 00 00 0A 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 D2 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 0A 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 28 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 02 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 02 00 00 00","01 00 00 00 00")
+    Aobswap("01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00","01 00 00 00 00")
+    checkbox_setState(MAXGUI[25], 2)
+  end
+
+end
+
+function GROUND_ADD()
+
+if (checkbox_getState(MAXGUI[26]) == 1) then
+    Aobswap("02 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 ?? ?? 00 00 ?? 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00","02 00 00 00 00")
+    Aobswap("02 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 ?? ?? 00 00 ?? 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00","02 00 00 00 00")
+    checkbox_setState(MAXGUI[26], 2)
+  else
+    Aobswap("02 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 ?? ?? 00 00 ?? 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00","02 00 00 00 00")
+    Aobswap("02 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 ?? ?? 00 00 ?? 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00","02 00 00 00 00")
+    checkbox_setState(MAXGUI[26], 2)
+  end
+
+end
+
+function AIR_ADD()
+
+if (checkbox_getState(MAXGUI[27]) == 1) then
+    Aobswap("03 00 00 00 01 00 00 00 ?? 00 00 00 02 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 ?? 00 00 00 ?? 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00","03 00 00 00 00")
+    Aobswap("03 00 00 00 01 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 ?? 00 00 00 ?? 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00","03 00 00 00 00")
+    Aobswap("03 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 0E 00 00 00 10 00 00 00 05 00 00 00 14 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00","03 00 00 00 00")
+    Aobswap("03 00 00 00 01 00 00 00 01 00 00 00 02 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 0E 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00","03 00 00 00 00")
+
+    checkbox_setState(MAXGUI[27], 2)
+  else
+    Aobswap("03 00 00 00 01 00 00 00 ?? 00 00 00 02 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 ?? 00 00 00 ?? 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00","03 00 00 00 00")
+    Aobswap("03 00 00 00 01 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 ?? 00 00 00 ?? 00 00 00 ?? 00 00 00 ?? 00 00 00 01 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00","03 00 00 00 00")
+    Aobswap("03 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 0E 00 00 00 10 00 00 00 05 00 00 00 14 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00","03 00 00 00 00")
+    Aobswap("03 00 00 00 01 00 00 00 01 00 00 00 02 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 0E 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00","03 00 00 00 00")
+    checkbox_setState(MAXGUI[27], 2)
+  end
+
+end
+
+function MERC_ADD()
+
+if (checkbox_getState(MAXGUI[28]) == 1) then
+    Aobswap("05 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 0E 00 00 00 09","05 00 00 00 00")
+    Aobswap("05 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 0E 00 00 00 0B","05 00 00 00 00")
+    Aobswap("05 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 0E 00 00 00 0A","05 00 00 00 00")
+    checkbox_setState(MAXGUI[28], 2)
+  else
+    Aobswap("05 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 0E 00 00 00 09","05 00 00 00 00")
+    Aobswap("05 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 0E 00 00 00 0B","05 00 00 00 00")
+    Aobswap("05 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 0E 00 00 00 0A","05 00 00 00 00")
+    checkbox_setState(MAXGUI[28], 2)
+  end
+
+end
+
+function GOGO_HACK()
+
+if (checkbox_getState(MAXGUI[29]) == 1) then
+    Aobswap("2D 2D 2D 5F 5F 5F 2D 5F 2D 02 72 45 0F 2D 5F 5F","?? ?? ?? ?? ?? ?? ?? ?? ?? 02 63 55 ?? ?? ?? ??")
+
+  else
+    Aobswap("?? ?? ?? ?? ?? ?? ?? ?? ?? 02 63 55 ?? ?? ?? ??","2D 2D 2D 5F 5F 5F 2D 5F 2D 02 72 45 0F 2D 5F 5F")
+end
+end
+
+function BASE_REPAIR()
+
+if (checkbox_getState(MAXGUI[30]) == 1) then
+Aobswap("2D 5F 5F 05 2D 5F 2D 5F 2D 02 68 70 0D 2D 5F 5F","?? ?? ?? ?? ?? ?? ?? ?? ?? 02 68 73 ?? ?? ?? ??")
+
+  else
+Aobswap("?? ?? ?? ?? ?? ?? ?? ?? ?? 02 68 73 ?? ?? ?? ??","2D 5F 5F 05 2D 5F 2D 5F 2D 02 68 70 0D 2D 5F 5F")
+end
+end
+
+
+
+function TIME_INCREASE()
+
+if (checkbox_getState(MAXGUI[31]) == 1) then
+    Aobswap("00 00 00 00 01 00 00 00 E8 03 00 00 ?? ?? 00 00 ?? ?? ?? 00 ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 40 8F 40 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00","00 00 00 00 01 00 00 00 01 00 00 00")
+
+  else
+    Aobswap("00 00 00 00 01 00 00 00 01 00 00 00 ?? ?? 00 00 ?? ?? ?? 00 ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 40 8F 40 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00","00 00 00 00 01 00 00 00 E8 03 00 00")
+
+  end
+
+end
+
+function DRONE_SILO_UNLOCK()
+
+if (checkbox_getState(MAXGUI[81]) == 1) then
+    Aobswap("0B 00 00 00 03 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","0B 00 00 00 03 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+
+else
+    Aobswap("0B 00 00 00 03 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","0B 00 00 00 03 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+
+  end
+
+end
+
+function ROCKET_SILO_UNLOCK()
+
+if (checkbox_getState(MAXGUI[82]) == 1) then
+    Aobswap("0F 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","0F 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+
+  else
+    Aobswap("0F 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","0F 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+
+  end
+
+end
+
+function MERCENARY_CAMP_UNLOCK()
+
+if (checkbox_getState(MAXGUI[83]) == 1) then
+    Aobswap("0A 00 00 00 02 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","0A 00 00 00 02 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+
+  else
+    Aobswap("0A 00 00 00 02 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","0A 00 00 00 02 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+
+  end
+
+end
+
+
+function THROPHY_UNLOCK()
+
+if (checkbox_getState(MAXGUI[84]) == 1) then
+    Aobswap("01 00 00 00 04 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??","?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00")
+
+  else
+    Aobswap("","")
+
+  end
+
+end
+
+function UPGRADE_MORE_WITH_GOGO()
+
+if (checkbox_getState(MAXGUI[85]) == 1) then
+    Aobswap("08 00 00 00 03 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 01 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 01 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 01 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 02 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 02 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+
+   else
+    Aobswap("08 00 00 00 03 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 01 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 01 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 01 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 01 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 02 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+    Aobswap("0F 00 00 00 02 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00","?? 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00")
+
+  end
+
+end
+
+
+-- PAGE 2 FUNCTIONS
+
+function EXTRA_TURRET_UNLOCK()
+
+if (checkbox_getState(MAXGUI[103]) == 1) then
+   -- ICHARUS Missile
+Aobswap("26 00 00 00 1E 00 00 00 07 00 00 00 0F 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 1E 00 00 00 ?? 00 00 00 0F 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+--Rocket Barrage
+Aobswap("07 00 00 00 00 00 00 00 07 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+--Shock turret
+Aobswap("08 00 00 00 00 00 00 00 08 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+--Napalm Turret
+Aobswap("09 00 00 00 00 00 00 00 09 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+--Flame cannon
+Aobswap("1C 00 00 00 14 00 00 00 0A 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+--Microwave turret
+Aobswap("20 00 00 00 00 00 00 00 0F 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+
+  else
+       -- ICHARUS Missile
+Aobswap("26 00 00 00 1E 00 00 00 07 00 00 00 0F 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 1E 00 00 00 ?? 00 00 00 0F 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+--Rocket Barrage
+Aobswap("07 00 00 00 00 00 00 00 07 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+--Shock turret
+Aobswap("08 00 00 00 00 00 00 00 08 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+--Napalm Turret
+Aobswap("09 00 00 00 00 00 00 00 09 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+--Flame cannon
+Aobswap("1C 00 00 00 14 00 00 00 0A 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+--Microwave turret
+Aobswap("20 00 00 00 00 00 00 00 0F 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00","?? 00 00 00 ?? ?? ?? ?? ?? 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 0? 00 00 00")
+  end
+
+end
+----------------------------------------- ONCLICK EVENTS  -----------------------------------------
+control_onClick(MAXGUI[12], scanBrowser)
+control_onClick(MAXGUI[16], ExecuteHacks)
+control_onClick(MAXGUI[17], ExecuteAllHacks)
+control_onClick(MAXGUI[23], ResetAllHacks)
+control_onClick(MAXGUI[25], INF_ADD)
+control_onClick(MAXGUI[26], GROUND_ADD)
+control_onClick(MAXGUI[27], AIR_ADD)
+control_onClick(MAXGUI[28], MERC_ADD)
+control_onClick(MAXGUI[29], GOGO_HACK)
+control_onClick(MAXGUI[30], BASE_REPAIR)
+control_onClick(MAXGUI[31], TIME_INCREASE)
+control_onClick(MAXGUI[81], UNLOCK_DRONE_SILO)
+control_onClick(MAXGUI[82], UNLOCK_ROCKET_SILO)
+control_onClick(MAXGUI[83], UNLOCK_MERCENARY_CAMP)
+control_onClick(MAXGUI[84], TROPHY_UNLOCK)
+control_onClick(MAXGUI[85], UPGRADE_MORE_WITH_GOGO)
+control_onClick(MAXGUI[103],EXTRA_TURRET_UNLOCK)
+
+control_onClick(MAXGUI[70], INGAME_HACKS)
+control_onClick(MAXGUI[71], MAX_Facebook)
+--control_onClick(MAXGUI[72], Info_Main)
+--control_onClick(MAXGUI[73], Info_Ingame)
+control_onClick(MAXGUI[72], Admin)
+control_onClick(MAXGUI[73], Admin)
+control_onClick(MAXGUI[74], Pregame_Hacks)
+control_onClick(MAXGUI[100], INGAME_HACKS_PAGE_2)
+control_onClick(MAXGUI[101], INGAME_HACKS)
+control_onClick(MAXGUI[500], MAX_Facebook)
+
+-- PAGE 2 CHECK BOXES CLICK
+
+
+
+setMethodProperty(MAXGUI[15], 'OnSelectionChange', HackDescriptionsChange)
+form_onClose(MAXGUI[1], CloseTrainer)
+
+
+form_show(MAXGUI[1])
+form_hide(MAXGUI[24])
+form_hide(MAXGUI[73])
+form_hide(MAXGUI[74])
+form_hide(MAXGUI[100])
+form_hide(MAXGUI[101])
+form_hide(MAXGUI[102])
+
+
+
+</LuaScript>
+</CheatTable>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="26">
+  <Forms>
+    <UDF1 Class="TCEForm" Encoding="Ascii85">ZP2l9!Y}j9V8.nKX]u@KH,TXHOSei88bGQ95:P7{Ht}sIN68]7J^gaPfrbvS-JSI7]+kai5I#?d7;[;[TkL{6DCq?XYJ,_(s81B68tI46ZSEgwZ3Pmw_L%o?J:z8Qs**rRN3f:T2^z(kl**/Yd_j)lbD]}FYPcx3Ls77;#6fltKP8DAKHMW)6IH^t1HDyvJy*RQuR,)lxlaO7taUpF$!5lZ;n)dZ+PDY)z)[D?$i=?pkgA{BJhJ*@t/Jp[r8bjoEgVr%jj:mT,:Z)W^}]BPasm</UDF1>
+  </Forms>
+  <CheatEntries/>
+  <UserdefinedSymbols/>
+  <LuaScript>UDF1.show()
+
+function pidDialog(doPid,autoSelectFirst,pn,dn)
+
+  autoSelectFirst = autoSelectFirst or false
+--  print(type(autoSelectFirst))
+  local plugname = type(pn)=='table' and pn or {"iexplore","flashplayerplugin","plugin-container","opera","chrome","awesomium_process","torch","dragon","maxthon","palemoon","safari" }
+  local dllname  = type(dn)=='table' and dn or {"flash","unity" }
+  if type(pn)=='string' then table.insert(plugname,pn) end
+  if type(dn)=='string' then table.insert(dllname,dn) end
+  local indexOf = function(s,m) for i=1,#m do if string.find(string.lower(s),string.lower(m[i]),1,true) then return i end end end -- cave insensitive find
+  local function tmerge(t,o,...) for k,v in pairs(o) do t[k]=v end if select('#',...)&gt;0 then return tmerge(t,...) else return t end end
+  local function callLater(f,...)
+    local a,n = {...},select('#',...)
+    local t = tmerge(createTimer(),{Interval=1,Enabled=true,OnTimer=function(sender) sender.Enabled=false sender.Destroy() f(unpack(a,1,n)) end})
+    return t
+  end
+  local function parseProc(i,s)
+    local dll=' ... '
+    for pid,name in string.gmatch(s,'([0-9A-F]+)-(.*)') do
+      local weight,pid = 0,tonumber(pid,16)
+      for _,v in ipairs(plugname) do
+        if indexOf(name,plugname) then
+          weight = weight + 1
+          local m = enumModules(pid)
+          for i=1,#m do
+            local ix = indexOf(m[i].Name,dllname)
+            if ix then
+              weight = weight + 1
+              dll = dllname[ix]
+              break
+            end
+          end
+          break
+        end
+      end
+      return {pid=pid,desc=string.format('%5d %04X &lt;%5s&gt; %s',pid,pid,string.sub(dll.."     ",1,5):upper(),name),name=name,w=weight+i/2048,dll=dll}
+    end
+  end
+
+  local FP = createForm(false)
+  tmerge(FP,{FormStyle='fsStayOnTop',AutoSize=true,BorderWidth=4,Color=0x00ffff,Position='poScreenCenter',BorderStyle='bsToolWindow',Caption='Double Click to Select'})
+  local LB = createListBox(FP)
+  tmerge(LB,{MultiSelect=false,AutoSize=true,Color=0xfff00f})
+  local cs = LB.Constraints
+  tmerge(cs,{MinHeight=80,MinWidth=280})
+  local fn = LB.Font
+  tmerge(fn,{Color=0x030303,Name='Courier New',Height=-12,Style='[bsBold]'})
+
+  LB.OnDblClick = function()
+    local idx,PID,NAME = LB.ItemIndex,nil,''
+    if idx &gt;= 0 then
+      DESC = LB.Items[idx]
+      for pid,pID,name in string.gmatch(DESC,"([0-9]+) ([0-9A-F]+) &lt;.-&gt; (.*)") do
+
+        PID = tonumber(pid,10)
+        NAME = name
+      end
+    end
+--    print(tostring(PID))
+    if PID ~= nil then callLater(doPid,PID,NAME,DESC) end
+    FP.close()
+  end -- LB.OnDblClick
+
+  FP.OnClose = function()  FP.destroy(); FP = nil end
+
+  getProcesslist(LB.Items)
+  local plist = {}
+  for i=1,LB.Items.getCount() do
+    table.insert(plist,parseProc(i,LB.Items[i-1]))
+  end
+
+  table.sort(plist,function(a,b) return a.w &gt; b.w end)
+  local currProcId = getOpenedProcessID()
+  for i=1,LB.Items.getCount() do
+    LB.Items.setString(i-1,plist[i].desc)
+    if plist[i].pid == currProcId then LB.setItemIndex(i-1) end
+--    if i &lt; 6 and type(autoSelectFirst)=='string' then print(plist[i].dll,indexOf(plist[i].dll,{autoSelectFirst}) or 'NIL') end
+    if i==1 and autoSelectFirst == true or type(autoSelectFirst)=='string' and indexOf(plist[i].dll,{autoSelectFirst}) ~=nil then
+      LB.setItemIndex(i-1) LB.OnDblClick() return
+    end
+  end
+
+  FP.show()
+end
+
+function DEC_HEX(IN)
+	local B,K,OUT,I,D=16,"0123456789ABCDEF","",0
+	 if IN&lt;1 then
+		OUT=0
+		return OUT
+	end
+	while IN&gt;0 do
+		I=I+1
+		IN,D=math.floor(IN/B),math.fmod(IN,B)+1
+		OUT=string.sub(K,D,D)..OUT
+	end
+	return OUT
+end
+
+function Aobswap(search, change)
+     aobs = AOBScan(search, "+W*X")
+     if(aobs == nil) then
+		AobSwapCheck=false
+	 else
+		 j = stringlist_getCount(aobs)
+		for i = 1, j do
+			 address=stringlist_getString(aobs,i-1)
+			 for i = 1, string.len(change), 3 do
+				 z = string.sub(change, i, i+2)
+				 x, y = string.find(z, "%?+")
+				  if (x == nil) then
+					 script=[[
+					 ]]..address.."+"..(DEC_HEX((i-1)/3))..[[:
+					 db ]]..z..[[
+					 ]]
+					 autoAssemble(script)
+				 end
+			 end
+		 end
+		object_destroy(aobs);
+		aobs=nil
+		AobSwapCheck=true
+	end
+end
+
+function AOBSwap(search, change)
+     aobs = AOBScan(search, "-W*X")
+     if(aobs == nil) then
+		AobSwapCheck=false
+	 else
+		 j = stringlist_getCount(aobs)
+		for i = 1, j do
+			 address=stringlist_getString(aobs,i-1)
+			 for i = 1, string.len(change), 3 do
+				 z = string.sub(change, i, i+2)
+				 x, y = string.find(z, "%?+")
+				  if (x == nil) then
+					 script=[[
+					 ]]..address.."+"..(DEC_HEX((i-1)/3))..[[:
+					 db ]]..z..[[
+					 ]]
+					 autoAssemble(script)
+				 end
+			 end
+		 end
+		object_destroy(aobs);
+		aobs=nil
+		AobSwapCheck=true
+	end
+end
+
+
+function AutoPidFinding(sender)
+pidDialog(function(pid,name)
+           openProcess(pid)
+           UDF1.CEButton1.Caption = (string.format('%s %04X-%s %s',"PID:",pid,name,'ON!'))
+           end,'flash')
+end
+
+function GoldHackTest(sender)
+ s = AOBScan("d1 66 ?? ?? 01 46 ?? 01 ?? ?? ?? ?? 66 ?? ?? ?? ?? 00 00 ?? 66 ?? ?? 66 ?? ?? ?? ?? 00 00 ?? ?? 01 66 ?? 01 ?? 66 66 ?? ?? ?? 66 ?? ?? 66 ?? ?? ?? ?? ?? ?? ?? ?? 66 ?? ?? 66 ?? ?? ?? ?? 00 00 ?? ?? 01 66 ?? 01 ?? 66 66 ?? ?? ?? 66 ?? ?? 66 ?? ?? ?? ?? ?? ?? ?? ?? ?? 46","2e 92 01 02 02 46 ?? 01 ?? ?? ?? ?? 66 ?? ?? ?? ?? 00 00 ?? 66 ?? ?? 66 ?? ?? ?? ?? 00 00 ?? ?? 01 66 ?? 01 ?? 66 66 ?? ?? ?? 66 ?? ?? 66 ?? ?? ?? ?? ?? ?? ?? ?? 66 ?? ?? 66 ?? ?? ?? ?? 00 00 ?? ?? 01 66 ?? 01 ?? 66 66 ?? ?? ?? 66 ?? ?? 66 ?? ?? ?? ?? ?? ?? ?? ?? ?? 46")
+ if (s) then
+ lngt = s.getCount()
+ for x=0, lngt-1, 1 do
+ writeBytes(s[x], 0x25, 0x9c, 0x4a, 0x02, 0x02, 0x46)
+ end
+ UDF1.CEButton1.Caption = 'Activated'
+ beep()
+ s.Destroy()
+ s = nil
+ else
+ UDF1.CEButton1.Caption = 'Failed'
+ return
+end
+end
+</LuaScript>
+</CheatTable>

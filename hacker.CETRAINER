@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="26">
+  <Forms>
+    <UDF1 Class="TCEForm" Encoding="Ascii85">b($/YgfJ9FOPLvpO#E3+,,lnHouvz7#33$-Ljn[+rXv+@p]Da#jPK=^]3M#$Gm,rx-n.nD;DL8DD2;A[Ck/AiRMlkj5MECr[6Bx/XOE2M1:v5xPUX%/+7TWYP{p}t6VM%SDP}8J%)=KJ:sYMn6R@+C-Q7o!s{:Vj08,U9)wXqF5#jUJ@Noz;@5B]a9%n5y@!44Dx93apRRgO=O1Ep3F^QhprpPMe.B;/n(U)Y5G2ja$?U27EA[+%Kpb9W?@%@meL)w3KMn-hYN?C@@deTC?4vKH}k9IdTQ}ndJm:^x{_00m3RAhv;93_cw.(M,UF_F%Qsj;lZ)AwZm_F%v=TH{9PqhA</UDF1>
+    <UDF2 Class="TCEForm" Encoding="Ascii85">J(r,6!!Qs/9lMR*BwO{K-LOKGEvv_FRHUj3je%t}Ee@5d#K9VbxCf]:4%}w!X%e}]^Xg@nn_VNp%Cj4./SKK%o.*tI,sQ[k$i8W}+5/WB[Dh(?ExQY+(+lXy[Qkk[7L98^?uBU{*%r4#+60S$iFnZe0U_oU1]gVaaV}laosAHBbz.zPK,uabAy7%=8oZVj[)CI3)rt0Sm,N#[tW=}u#*h9,ueMO?aGH7pHtLPs.IZOS++-yM9.[Y.AKt,l^N%iRTY4xl(cSydOJ_*I)I8HTf*Mft</UDF2>
+  </Forms>
+  <CheatEntries/>
+  <UserdefinedSymbols/>
+  <LuaScript>UDF1.show()
+form_hide(UDF2)
+
+-- UDF1
+
+UDF1.CEEdit1.Text = ""
+UDF1.CEEdit2.Text = ""
+
+function Login_System(sender)
+if UDF1.CEEdit1.Text ~= 'thanks for saying that' then return end
+if UDF1.CEEdit2.Text ~= 'password' then
+
+UDF1.CEEdit1.Text = ""
+UDF1.CEEdit2.Text = ""
+return
+showMessage("UserName Or Password is wrong :)")
+else
+form_hide(UDF1)
+form_show(UDF2)
+return
+end
+end
+
+-- UDF2
+
+version = "Thanks For Talk Like That To Us :)\nشكرا لتحدث مثل هذا لنا :)\nMerci de nous avoir parlé comme ça :)"  -- and version? 1.0.11. etc..
+text = "" .. version .. "                 "  -- "Version Number" or "8 Ball Poll Trainer V: ;)
+index = 1
+
+c=createTimer(nil)
+c.Interval=100
+c.OnTimer=function(c)
+  if index &lt;= #text then
+    control_setVisible(UDF2.CELabel1, true)
+    control_setCaption(UDF2.CELabel1, text:sub(1,index))
+    index = index + 1
+  else
+    control_setVisible(UDF2.CELabel1, false)
+    index = 1
+  end
+  end
+c.Enabled=true
+</LuaScript>
+</CheatTable>
